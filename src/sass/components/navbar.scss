@@ -1,0 +1,35 @@
+.navbar {
+    height: 7rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background: #000;
+
+    .navBox {
+        list-style: none;
+        color: #fff;
+        font-family: cursive, sans-serif;
+        display: flex;
+    };
+
+    .navOne {
+        justify-content: flex-start;
+        align-items: center;
+
+        li {
+            cursor: pointer;
+            margin: 0 3rem;
+            font-size: 1.8rem;
+        };
+    };
+
+    .navTwo {
+        justify-content: center;
+        align-items: center;
+
+        li {
+            cursor: pointer;
+            margin: 0 1rem;
+            font-size: 2.3rem;
+        };
+    };
+};
