@@ -1,14 +1,20 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
     return(
         <div className='navbar'>
             <div className='navOne navBox'>
-                <li>
-                    Home
-                </li>
-    
-                <li>
-                    Jerseys
-                </li>
+                <Link to='/'>
+                    <li>
+                        Home
+                    </li>
+                </Link>
+
+                <Link to='/jersey'>
+                    <li>
+                        Jerseys
+                    </li>
+                </Link>
 
                 <li>
                     Shorts

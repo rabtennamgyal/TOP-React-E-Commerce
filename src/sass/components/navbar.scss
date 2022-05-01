@@ -10,6 +10,11 @@
         font-family: cursive, sans-serif;
         display: flex;
         font-family: Raleway, Open Sans, sans-serif;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        };
     };
 
     .navOne {
@@ -43,7 +48,7 @@
 
         li {
             cursor: pointer;
-            margin: 0 1rem;
+            margin: 0 2rem;
             font-size: 2.3rem;
         };
     };
@@ -82,5 +87,5 @@
             margin: .1rem 1rem;
             transition: 0.7s ease-in-out;
         };
-    }
+    };
 };

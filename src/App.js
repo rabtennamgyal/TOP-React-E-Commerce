@@ -1,11 +1,9 @@
-import Navbar from './components/navbar';
-
-
+import RoutesSwitch from "./RoutesSwitch";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <RoutesSwitch />
     </div>
   );
 }
