@@ -9,6 +9,7 @@
         color: #fff;
         font-family: cursive, sans-serif;
         display: flex;
+        font-family: Raleway, Open Sans, sans-serif;
     };
 
     .navOne {
@@ -19,6 +20,16 @@
             cursor: pointer;
             margin: 0 3rem;
             font-size: 1.8rem;
+
+            @include respond(phone) {
+                margin: 0 1rem;
+                font-size: 1.5rem;
+            };
+
+            @include respond(tab) {
+                margin: 0 2rem;
+                font-size: 1.5rem;
+            };
         };
     };
 
@@ -26,10 +37,50 @@
         justify-content: center;
         align-items: center;
 
+        @include respond(phone) {
+            display: none;
+        };
+
         li {
             cursor: pointer;
             margin: 0 1rem;
             font-size: 2.3rem;
         };
     };
+
+    .hamburger {
+        display: none;
+
+        &:hover {
+            :first-child {
+                transform: rotate(45deg);
+            }
+
+            :not(:first-child):not(:last-child) {
+                display: none;
+            }
+
+            :last-child {
+                transform: rotate(-45deg);
+            }
+        };
+
+        @include respond(phone) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+        };
+
+        span {
+            cursor: pointer;
+            transform-origin: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            height: 5px;
+            width: 3rem;
+            margin: .1rem 1rem;
+            transition: 0.7s ease-in-out;
+        };
+    }
 };
