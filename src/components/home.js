@@ -1,7 +1,40 @@
-function Home() {
+import { useState } from 'react';
+import datas from './carousal';
+
+function Home() {    
+    const [cur, setcur] = useState(0);
+    const length = 2;
+
+    const next = () => {
+        setcur(cur === length - 1 ? 0 : cur + 1)
+    };
+
+    const prev = () => {
+        setcur(cur === 0 ? length - 1 : cur - 1)
+    };
+
     return (
         <div className="home">
-            this is home
+            <div className="container">              
+                <button className="left" id='carBtn' onClick={prev}>
+                    &larr;
+                </button>
+
+                <div className='carBox'>
+                    {datas.map((el, i) => {
+                        console.log(el, i);
+                        return (
+                            <div id='el' className={i === cur ? 'active' : 'slide'} key={i}>
+                                {i === cur && (<img id='img' src={el.img} alt='img' />)}
+                            </div>
+                        );
+                    })};
+                </div>
+
+                <button className="right" id='carBtn' onClick={next}>
+                    &rarr;
+                </button>
+            </div>
         </div>
     )
 };

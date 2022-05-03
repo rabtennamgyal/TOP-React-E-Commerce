@@ -26,6 +26,10 @@
             margin: 0 3rem;
             font-size: 1.8rem;
 
+            &:hover {
+                color: #808080;
+            };
+
             @include respond(phone) {
                 margin: 0 1rem;
                 font-size: 1.5rem;
