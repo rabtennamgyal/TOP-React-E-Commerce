@@ -1,5 +1,6 @@
 import first from '../assets/first.jpg';
 import second from '../assets/second.jpg';
+import third from '../assets/third.webp';
 
 const datas = [
     {
@@ -8,7 +9,11 @@ const datas = [
     },
     {
         img: second,
-        text: "Manchester United's latest uniform."
+        text: "Red Devil's Jersey is on sale."
+    },
+    {
+        img: third,
+        text: "Nike's latest most data-driven shoe yet."
     }
 ];
 

@@ -3,7 +3,7 @@ import datas from './carousal';
 
 function Home() {    
     const [cur, setcur] = useState(0);
-    const length = 2;
+    const length = 3;
 
     const next = () => {
         setcur(cur === length - 1 ? 0 : cur + 1)
@@ -22,10 +22,10 @@ function Home() {
 
                 <div className='carBox'>
                     {datas.map((el, i) => {
-                        console.log(el, i);
                         return (
-                            <div id='el' className={i === cur ? 'active' : 'slide'} key={i}>
+                            <div id='el' className='cards' key={i}>
                                 {i === cur && (<img id='img' src={el.img} alt='img' />)}
+                                {i === cur && (<div id='texts'><h1>{el.text}</h1></div>)}
                             </div>
                         );
                     })};

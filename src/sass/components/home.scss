@@ -11,14 +11,32 @@
             overflow: hidden;
             height: 100%;
 
-            #el {
+            .cards {
                 position: absolute;
                 height: 100%;
                 width: 100%;
+                display: grid;
 
                 #img {
                     width: 100%;
-                    height: 100%;
+                    height: auto;
+                };
+
+                #texts {
+                    border: 3px solid #fff;
+                    position: absolute;
+                    height: 25%;
+                    width: 50%;
+                    justify-self: center;
+                    align-self: center;
+                    display: grid;
+                    place-items: center;
+
+                    h1 {
+                        color: #fff;
+                        font-size: 2.5rem;
+                        font-family: Open Sans, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    };
                 };
             };
         }
