@@ -11,6 +11,27 @@
             overflow: hidden;
             height: 100%;
 
+            .homecards-enter {
+                opacity: 0;
+                transform: scale(.9);
+            }
+
+            .homecards-enter-active {
+                opacity: 1;
+                transform: translateX(0);
+                transition: opacity 300ms, transform 300ms;
+            }
+    
+            .homecards-exit {
+                opacity: 1;
+            }
+            
+            .homecards-exit-active {
+                opacity: 1;
+                transform: scale(.9);
+                transition: opacity 300ms, transform 300ms;
+            }
+
             .cards {
                 position: absolute;
                 height: 100%;

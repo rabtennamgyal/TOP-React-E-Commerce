@@ -1,7 +1,7 @@
 Things to work on: 
 1. Create hover effects on carousal buttons
 2. Change text coloring of the carousal
-3. 
+3. Make the carousal responsive
 
 # Getting Started with Create React App
 
