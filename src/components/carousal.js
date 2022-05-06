@@ -5,7 +5,7 @@ import third from '../assets/third.webp';
 const datas = [
     {
         img: first,
-        text: 'Get the lastest uniforms of your team.'
+        text: 'Get the lastest uniform of your team.'
     },
     {
         img: second,
