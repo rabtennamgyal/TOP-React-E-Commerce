@@ -1,59 +1,67 @@
 .home {
-    height: 200vh;
+    position: relative;
+    height: 80vh;
 
-    .slider {
-        height: 50%;
+    .carousal {
+        height: 100%;
         width: 100%;
+        display: flex;
+        overflow: hidden;
 
-        .content {
-            height: 100%;
-            width: 100%;
-            position: relative;
-            display: grid;
+        .cards {
 
             img {
                 height: 100%;
                 width: 100%;
-            }
-
-            .textholder {
-                position: absolute;
-                border: 3px solid #fff;
-                background: #00000085;
-                height: 30%;
-                width: 50%;
-                justify-self: center;
-                align-self: center;
-                display: grid;
-                place-items: center;
 
                 @include respond(phone) {
-                    width: 70%;
-                };
-
-                @include respond(tab) {
-                    width: 90%;
-                };
-
-                h1 {
-                    color: #fff;
-                    font-family: Open Sans, sans-serif;
-                    font-size: 2.2rem;
-
-                    @include respond(phone) {
-                        font-size: 1.5rem;
-                    };
-
-                    @include respond(tab) {
-                        font-size: 1.8rem;
-                    }
+                    height: auto;
                 }
             }
         }
     };
 
-    .demo {
-        margin-top: 10rem;
-        height: 50%;
+    .buttons {
+        z-index: 100;
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        top: 50%;
+
+        @include respond(phone) {
+            height: 30px;
+            width: 30px;
+        };
+
+        @include respond(tab) {
+            height: 30px;
+            width: 30px;
+        }
+
+        button {
+            border: solid #fff;
+            cursor: pointer;
+            color: #000;
+            background: #fff;
+            height: inherit;
+            width: inherit;
+            font-size: 3rem;
+
+            @include respond(phone) {
+                font-size: 1.5rem;
+            };
+
+            @include respond(tab) {
+                font-size: 1.5rem;
+            }
+        }
+    };
+
+    #right {
+        left: 90%;
+    };
+
+    #left {
+        left: 5%;
     }
 };

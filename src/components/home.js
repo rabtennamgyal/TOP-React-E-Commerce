@@ -1,29 +1,42 @@
-import datas from './carousal';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import { useState } from "react";
+import carousalData from "../assets/carousalData";
 
 function Home() {    
+    const [cur, setcur] = useState(0);
+    const length = carousalData.length;
+
+    const next = () => {
+        setcur(cur === length - 1 ? 0 : cur + 1);
+    };
+    
+    const prev = () => {
+        setcur(cur === 0 ? length - 1 : cur - 1);
+    };
+
     return (
-        <div className="home">            
-            <Carousel className='slider' autoPlay>
+        <div className="home">          
+            <div className='buttons' id='left'>
+                <button onClick={prev}>
+                    &larr;
+                </button>
+            </div>
+
+            <div className="carousal">
                 {
-                    datas.map((el, i) => {
+                    carousalData.map((el, i) => {
                         return (
-                            <div className='content'>
-                                <img src={el.img} key={i} alt='img' />
-                                <div className='textholder'>
-                                    <h1>
-                                        {el.text}
-                                    </h1>
-                                </div>
+                            <div className="cards" key={i}>
+                                {i === cur && (<img src={el.img} alt='img' />)}
                             </div>
                         )
                     })
                 }
-            </Carousel>
+            </div>
 
-            <div className='demo'>
-                
+            <div className='buttons' id='right'>
+                <button onClick={next}>
+                    &rarr;
+                </button>
             </div>
         </div>
     )
