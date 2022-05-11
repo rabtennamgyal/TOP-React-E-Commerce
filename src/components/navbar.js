@@ -30,8 +30,14 @@ function Navbar() {
                     <ion-icon name="heart-outline"></ion-icon>
                 </li>
 
-                <li>
+                <li id='cart'>
                     <ion-icon name="cart-outline"></ion-icon>
+
+                    <div id="cartItems">
+                        <p>    
+                            0
+                        </p>
+                    </div>
                 </li>
             </div>
 

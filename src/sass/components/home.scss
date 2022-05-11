@@ -1,12 +1,20 @@
 .home {
-    position: relative;
-    height: 80vh;
+    height: 200vh;
 
     .carousal {
-        height: 100%;
+        position: relative;
+        height: 80vh;
         width: 100%;
         display: flex;
         overflow: hidden;
+
+        @include respond(phone) {
+            height: 40vh;
+        };
+
+        @include respond(tab) {
+            height: auto;
+        } 
 
         .cards {
 
@@ -14,7 +22,7 @@
                 height: 100%;
                 width: 100%;
 
-                @include respond(phone) {
+                @include respond(tab) {
                     height: auto;
                 }
             }

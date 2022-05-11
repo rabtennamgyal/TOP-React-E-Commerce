@@ -15,13 +15,13 @@ function Home() {
 
     return (
         <div className="home">          
-            <div className='buttons' id='left'>
-                <button onClick={prev}>
-                    &larr;
-                </button>
-            </div>
-
             <div className="carousal">
+                <div className='buttons' id='left'>
+                    <button onClick={prev}>
+                        &larr;
+                    </button>
+                </div>
+
                 {
                     carousalData.map((el, i) => {
                         return (
@@ -31,12 +31,12 @@ function Home() {
                         )
                     })
                 }
-            </div>
 
-            <div className='buttons' id='right'>
-                <button onClick={next}>
-                    &rarr;
-                </button>
+                <div className='buttons' id='right'>
+                    <button onClick={next}>
+                        &rarr;
+                    </button>
+                </div>
             </div>
         </div>
     )
