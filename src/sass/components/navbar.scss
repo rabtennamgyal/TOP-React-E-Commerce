@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     background: #000;
+    position: relative;
 
     @include respond(phone) {
         display: flex;
@@ -117,4 +118,46 @@
             }
         };
     };
+
+    .mobileMenu {
+        z-index: 200;
+        position: absolute;
+        top: 10vh;
+        background: #000;
+        height: 0;
+        width: 100%;
+        transition: 0.7s ease-in-out;
+
+        .mobileMenuContent {
+            border: solid #fff;
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+                
+            li {
+                color: #fff;
+                list-style: none;
+                cursor: pointer;
+                margin: 0 2rem;
+                font-size: 2.3rem;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            };
+            
+            a {
+                color: #fff;
+                text-decoration: none;
+    
+                li {
+                    list-style: none;
+                    cursor: pointer;
+                    margin: 0 2rem;
+                    font-size: 2.3rem;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                };
+            };
+        }
+    }
 };

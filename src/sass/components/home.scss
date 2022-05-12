@@ -9,7 +9,7 @@
         overflow: hidden;
 
         @include respond(phone) {
-            height: 40vh;
+            height: auto;
         };
 
         @include respond(tab) {
@@ -21,6 +21,11 @@
             img {
                 height: 100%;
                 width: 100%;
+
+                @include respond(phone) {
+                    height: auto;
+                    width: 100%;
+                }
 
                 @include respond(tab) {
                     height: auto;
@@ -47,7 +52,8 @@
         }
 
         button {
-            border: solid #fff;
+            //border: solid #fff;
+            border: .1px solid #000;
             cursor: pointer;
             color: #000;
             background: #fff;
