@@ -1,6 +1,6 @@
-import one from '../assets/one.webp';
-import two from '../assets/two.jpg';
-import three from '../assets/three.jpg';
+import one from '../assets/green.png';
+import two from '../assets/blue.jpeg';
+import three from '../assets/yellow.jpeg';
 
 
 const carousalData = [

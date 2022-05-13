@@ -14,7 +14,7 @@ function Home() {
     };
 
     return (
-        <div className="home">          
+        <div className="home">    
             <div className="carousal">
                 <div className='buttons' id='left'>
                     <button onClick={prev}>
@@ -36,6 +36,34 @@ function Home() {
                     <button onClick={next}>
                         &rarr;
                     </button>
+                </div>
+            </div>
+
+            <div className="intro">
+                <div className="introOne">
+                    <h1>
+                        No-Frills Football Store
+                    </h1>
+                </div>
+
+                <div className="introTwo">
+                    <div className="introTwoOne">
+                        <p>
+                            We are a No-Frills Football Store providing the 
+                            best Football uniforms and cleats at the cheapest 
+                            prices as possible. Don't doubt us though, our cheap
+                            prices doesn't equate to a poor quality merchandise. 
+                            We sell authentic top quality kits straight from the 
+                            manufacturer such as Nike, Adidas and Puma.
+                        </p>
+                    </div>
+
+                    <div className="introTwoTwo">
+                        <div className="boxes"></div>
+                        <div className="boxes"></div>
+                        <div className="boxes"></div>
+                        <div className="boxes"></div>
+                    </div>
                 </div>
             </div>
         </div>
