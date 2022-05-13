@@ -9,7 +9,7 @@
         overflow: hidden;
 
         @include respond(phone) {
-            height: auto;
+            height: 40vh;
         };
 
         @include respond(tab) {
@@ -23,7 +23,7 @@
                 width: 100%;
 
                 @include respond(phone) {
-                    height: auto;
+                    height: 100%;
                     width: 100%;
                 }
 
