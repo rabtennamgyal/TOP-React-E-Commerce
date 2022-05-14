@@ -1,6 +1,14 @@
 .home {
     height: 200vh;
 
+    @include respond(phone) {
+        height: 100vh;
+    }
+
+    @include respond(tab) {
+        height: 130vh;
+    }
+
     .carousal {
         position: relative;
         height: 88vh;
@@ -13,7 +21,7 @@
         };
 
         @include respond(tab) {
-            height: auto;
+            height: 70vh;
         } 
 
         .cards {
@@ -84,6 +92,14 @@
         background: #000;
         display: grid;
         grid-template-rows: 30% 70%;
+        
+        @include respond(phone) {
+            height: 60vh;
+        }
+
+        @include respond(tab) {
+            height: 80vh;
+        }
 
         .introOne {
             display: grid;
@@ -93,6 +109,14 @@
                 color: #fff;
                 font-size: 4rem;
                 font-family: Kanit, sans-serif;
+
+                @include respond(phone) {
+                    font-size: 2.5rem;
+                }
+
+                @include respond(tab) {
+                    font-size: 3rem;
+                }
             }
         }
 
@@ -105,10 +129,26 @@
                 height: 100%;
                 padding: 3rem 15rem;
 
+                @include respond(phone) {
+                    padding: 1rem 3rem;
+                }
+
+                @include respond(tab) {
+                    padding: 1rem 10rem;
+                }
+
                 p {
                     color: #fff;
                     font-size: 2.8rem;
                     font-family: Kanit, sans-serif;
+
+                    @include respond(phone) {
+                        font-size: 1.5rem;
+                    }
+
+                    @include respond(tab) {
+                        font-size: 2rem;
+                    }
                 }
             }
 
@@ -119,10 +159,58 @@
                 align-items: center;
 
                 .boxes {
+                    position: relative;
+                    background: #fff;
+                    cursor: pointer;
                     margin: 0 5rem;
                     border: solid #fff;
+                    border-radius: 1rem;
                     height: 10rem;
                     width: 10rem;
+                    display: grid;
+                    place-items: center;
+
+                    &:hover {
+                        :first-child {
+                            display: none;
+                        }
+
+                        :last-child {
+                            display: grid;
+                        }
+                    }
+
+                    img {
+                        height: 90%;
+                        width: 90%;
+                    }
+
+                    .boxes2 {
+                        position: absolute;
+                        border: solid #fff;
+                        border-radius: 1rem;
+                        height: 100%;
+                        width: 100%;
+                        display: none;
+                        place-items: center;
+
+                        h1 {
+                            font-family: Kanit, sans-serif;
+                            font-size: 1rem;
+                        }
+                    }
+
+                    @include respond(phone) {
+                        margin: 0 2rem;
+                        height: 4rem;
+                        width: 4rem;
+                    }
+
+                    @include respond(tab) {
+                        margin: 0 2rem;
+                        height: 6rem;
+                        width: 6rem;
+                    }
                 }
             }
         }
