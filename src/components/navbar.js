@@ -12,7 +12,7 @@ function Navbar() {
             mobileMenu.style.height = '100vh';
             setTimeout(() => {
                 content.style.display = 'flex';
-            }, 100);
+            }, 500);
         };
     };
 
