@@ -1,4 +1,15 @@
 
+1. Need to work on the hoverer. It is acting up after a few or the first hoverss.
+
+
+
+
+
+
+
+
+
+
 
 # Getting Started with Create React App
 

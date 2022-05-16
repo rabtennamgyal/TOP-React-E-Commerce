@@ -22,7 +22,7 @@ function Home() {
             <div className="carousal">
                 <div className='buttons' id='left'>
                     <button onClick={prev}>
-                        &larr;
+                        <ion-icon name="chevron-back-outline"></ion-icon>
                     </button>
                 </div>
 
@@ -38,7 +38,7 @@ function Home() {
 
                 <div className='buttons' id='right'>
                     <button onClick={next}>
-                        &rarr;
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
                     </button>
                 </div>
             </div>
@@ -52,14 +52,14 @@ function Home() {
 
                 <div className="introTwo">
                     <div className="introTwoOne">
-                        <p>
-                            We are a No-Frills Football Store providing the 
-                            best Football uniforms and cleats at the cheapest 
-                            prices as possible. Don't doubt us though, our cheap
-                            prices doesn't equate to a poor quality merchandise. 
-                            We sell authentic top quality items straight from 
-                            manufacturer such as Nike, Adidas and Puma.
-                        </p>
+                        <div className="textContent">
+                            <p>
+                                We are a No-Frills Football Store providing the best Football uniforms and 
+                                cleats at the cheapest prices as possible. Don't doubt us though, our cheap
+                                prices doesn't equate to a poor quality merchandise. We sell authentic top 
+                                quality items straight from manufacturer such as Nike, Adidas and Puma.
+                            </p>
+                        </div>
                     </div>
 
                     <div className="introTwoTwo">

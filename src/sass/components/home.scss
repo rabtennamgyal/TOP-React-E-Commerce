@@ -60,7 +60,6 @@
         }
 
         button {
-            //border: solid #fff;
             border: .1px solid #000;
             cursor: pointer;
             color: #000;
@@ -68,6 +67,8 @@
             height: inherit;
             width: inherit;
             font-size: 3rem;
+            display: grid;
+            place-items: center;
 
             @include respond(phone) {
                 font-size: 1.5rem;
@@ -127,27 +128,29 @@
 
             .introTwoOne {
                 height: 100%;
-                padding: 3rem 15rem;
+                display: grid;
+                place-items: center;
 
-                @include respond(phone) {
-                    padding: 1rem 3rem;
-                }
-
-                @include respond(tab) {
-                    padding: 1rem 10rem;
-                }
-
-                p {
-                    color: #fff;
-                    font-size: 2.8rem;
-                    font-family: Kanit, sans-serif;
+                .textContent {
+                    height: 100%;
+                    width: 80%;
 
                     @include respond(phone) {
-                        font-size: 1.5rem;
+                        width: 90%;
                     }
 
-                    @include respond(tab) {
-                        font-size: 2rem;
+                    p {
+                        color: #fff;
+                        font-size: 2.8rem;
+                        font-family: Kanit, sans-serif;
+    
+                        @include respond(phone) {
+                            font-size: 1.8rem;
+                        }
+    
+                        @include respond(tab) {
+                            font-size: 2rem;
+                        }
                     }
                 }
             }
@@ -205,9 +208,9 @@
                     }
 
                     @include respond(phone) {
-                        margin: 0 1rem;
-                        height: 7rem;
-                        width: 7rem;
+                        margin: 0 2rem;
+                        height: 4rem;
+                        width: 4rem;
                     }
 
                     @include respond(tab) {

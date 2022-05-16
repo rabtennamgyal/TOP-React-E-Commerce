@@ -16,36 +16,79 @@ function Navbar() {
         };
     };
 
+    let position;
+    let current;
+
+    const hoverer = document.getElementById('hoverer');
+    const link = document.querySelectorAll('.links');
+    const links = Array.from(link);
+
+    function slideLine() {
+        for (let i = 0; i < links.length; i++) {
+            if (links[i].matches(":hover")) {
+                const elleft = links[i].getBoundingClientRect().left;
+                const elwidth = links[i].offsetWidth;
+                position = elleft;
+                current = links[i];
+                hoverer.style.left = `${elleft}px`;
+                hoverer.style.width = `${elwidth}px`;
+                console.log('yes')
+            }
+        }
+    };
+
+    function setPos(pos, cur) {
+        if (cur) {
+            const val1 = cur.getBoundingClientRect().left;
+            const val2 = cur.offsetWidth;
+            hoverer.style.left = `${val1}px`;
+            hoverer.style.width = `${val2}px`;
+        }
+    };
+
+    setInterval(() => {
+        slideLine();
+        setPos(position, current);
+    });
+
     return(
         <div className='navbar'>
+            <span className="hoverer" id='hoverer'>
+                {/* Content will be created using Sass. */}
+            </span>
+
             <div className='navOne navBox'>
                 <Link to='/'>
-                    <li>
+                    <li className="links">
                         Home
                     </li>
                 </Link>
 
                 <Link to='/jersey'>
-                    <li>
+                    <li className="links">
                         Jerseys
                     </li>
                 </Link>
 
-                <li>
+                <li className="links">
                     Shorts
                 </li>
     
-                <li>
+                <li className="links">
                     Footwears
                 </li>
             </div>
 
             <div className='navTwo navBox'>
-                <li>
+                <li className="links">
                     <ion-icon name="heart-outline"></ion-icon>
                 </li>
 
-                <li id='cart'>
+                <li className="links">
+                    <ion-icon name="person-outline"></ion-icon>
+                </li>
+
+                <li className='links' id='cart'>
                     <ion-icon name="cart-outline"></ion-icon>
 
                     <div id="cartItems">
