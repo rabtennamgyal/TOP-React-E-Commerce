@@ -6,7 +6,7 @@
     }
 
     @include respond(tab) {
-        height: 130vh;
+        height: auto;
     }
 
     .carousal {
@@ -208,9 +208,9 @@
                     }
 
                     @include respond(phone) {
-                        margin: 0 2rem;
-                        height: 4rem;
-                        width: 4rem;
+                        margin: 0 1.3rem;
+                        height: 6rem;
+                        width: 6rem;
                     }
 
                     @include respond(tab) {
