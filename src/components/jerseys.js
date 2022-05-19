@@ -10,6 +10,8 @@ function Jerseys() {
     return (
         <div className="jerseys">
             <div className="catalogCard">
+                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+
                 <div className='catalogCardOne'>
                     <img src={manutd} alt='img' />
                 </div>
@@ -26,6 +28,8 @@ function Jerseys() {
             </div>
 
             <div className="catalogCard">
+                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+
                 <div className='catalogCardOne'>
                     <img src={chelsea} alt='img' />
                 </div>
@@ -42,6 +46,8 @@ function Jerseys() {
             </div>
 
             <div className="catalogCard">
+                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+
                 <div className='catalogCardOne'>
                     <img src={realmadrid} alt='img' />
                 </div>
@@ -58,6 +64,8 @@ function Jerseys() {
             </div>
 
             <div className="catalogCard">
+                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+
                 <div className='catalogCardOne'>
                     <img src={barca} alt='img' />
                 </div>
@@ -74,6 +82,8 @@ function Jerseys() {
             </div>
 
             <div className="catalogCard">
+                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+
                 <div className='catalogCardOne'>
                     <img src={juve} alt='img' />
                 </div>
@@ -90,6 +100,8 @@ function Jerseys() {
             </div>
 
             <div className="catalogCard">
+                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+
                 <div className='catalogCardOne'>
                     <img src={mancity} alt='img' />
                 </div>

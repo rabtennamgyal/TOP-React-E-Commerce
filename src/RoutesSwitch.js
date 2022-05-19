@@ -12,7 +12,7 @@ function RoutesSwitch() {
                 <Route path="/" element={<Home />} />
                 <Route path="/jersey" element={<Jerseys />} />
             </Routes>
-            <Footer />
+            {/* <Footer /> */}
         </BrowserRouter>
     );
 };

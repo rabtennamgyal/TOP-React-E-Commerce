@@ -26,7 +26,7 @@ function Home() {
                     </button>
                 </div>
 
-                {
+                {/* {
                     carousalData.map((el, i) => {
                         return (
                             <div className="cards" key={i}>
@@ -34,7 +34,12 @@ function Home() {
                             </div>
                         )
                     })
-                }
+                } */}
+                <div className="cards">
+                    <h1>
+                        Some Content
+                    </h1>
+                </div>
 
                 <div className='buttons' id='right'>
                     <button onClick={next}>
