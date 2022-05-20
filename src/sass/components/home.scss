@@ -21,10 +21,10 @@
             height: 100%;
             width: 100%;
 
-            // img {
-            //     height: 60rem;
-            //     width: 1400px;
-            // }
+            img {
+                height: 60rem;
+                width: 1400px;
+            }
         }
     };
 
@@ -76,6 +76,7 @@
 
     .intro {
         background: #000;
+        background: #fff;
         display: grid;
         grid-template-rows: 30% 70%;
 
@@ -93,6 +94,7 @@
 
             h1 {
                 color: #fff;
+                color: #000;
                 font-size: 4rem;
                 font-family: Kanit, sans-serif;
 
@@ -125,6 +127,7 @@
 
                     p {
                         color: #fff;
+                        color: #000;
                         font-size: 2.8rem;
                         font-family: Kanit, sans-serif;
     
@@ -147,7 +150,7 @@
                     background: #fff;
                     cursor: pointer;
                     margin: 0 5rem;
-                    border: solid #fff;
+                    border: solid #000;
                     border-radius: 1rem;
                     height: 10rem;
                     width: 10rem;

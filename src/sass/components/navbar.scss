@@ -54,20 +54,6 @@
         cursor: pointer;
         display: none;
 
-        &:hover {
-            :first-child {
-                transform: rotate(45deg);
-            }
-
-            :not(:first-child):not(:last-child) {
-                display: none;
-            }
-
-            :last-child {
-                transform: rotate(-45deg);
-            }
-        };
-
         @include respond(phone) {
             display: flex;
             flex-direction: column;
