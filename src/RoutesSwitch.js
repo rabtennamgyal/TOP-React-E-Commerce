@@ -3,6 +3,7 @@ import Navbar from "./components/navbar";
 import Home from "./components/home";
 import Jerseys from './components/jerseys';
 import Footer from "./components/footer";
+import Manutd from "./components/productDetails.js/manutd";
 
 function RoutesSwitch() {
     return (
@@ -11,6 +12,7 @@ function RoutesSwitch() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/jersey" element={<Jerseys />} />
+                <Route path="/manutd" element={<Manutd />} />
             </Routes>
             <Footer />
         </BrowserRouter>

@@ -1,0 +1,60 @@
+.productDetails {
+    min-height: 100vh;
+    max-height: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    .divOne {
+        border-right:.1px solid #000;
+        display: grid;
+        grid-template-rows: 80% 20%;
+
+        .mainimg {
+            display: grid;
+            place-items: center;
+
+            img {
+                cursor: pointer;
+                height: 40rem;
+
+                @include respond(phone) {
+                    height: 30rem;
+                }
+            }
+        }
+
+        .slider {
+            justify-self: center;
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            @include respond(phone) {
+                width: 70%;
+            }
+
+            .imgDivs {
+                display: grid;
+                place-items: center;
+
+                img {
+                    cursor: pointer;
+                    height: 9rem;
+
+                    @include respond(phone) {
+                        height: 6rem;
+                    }
+
+                    &:hover {
+                        border: .1px solid #000;
+                    }
+                }
+            }
+        }
+    }
+}

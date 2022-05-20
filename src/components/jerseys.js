@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import manutd from '../assets/catalog/manutd.jpeg';
 import chelsea from '../assets/catalog/chelsea.webp';
 import realmadrid from '../assets/catalog/realmadrid.webp';
@@ -12,23 +13,25 @@ import psg from '../assets/catalog/psg.webp';
 function Jerseys() {
     return (
         <div className="jerseys">
-            <div className="catalogCard">
-                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
-
-                <div className='catalogCardOne'>
-                    <img src={manutd} alt='img' />
+            <Link to='/manutd'>
+                <div className="catalogCard">
+                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+    
+                    <div className='catalogCardOne'>
+                        <img src={manutd} alt='img' />
+                    </div>
+    
+                    <div className='catalogCardTwo'>
+                        <h1>
+                            Man Utd Jersey
+                        </h1>
+    
+                        <p>
+                            $ 50
+                        </p>
+                    </div>
                 </div>
-
-                <div className='catalogCardTwo'>
-                    <h1>
-                        Man Utd Jersey
-                    </h1>
-
-                    <p>
-                        $ 50
-                    </p>
-                </div>
-            </div>
+            </Link>
 
             <div className="catalogCard">
                 <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>

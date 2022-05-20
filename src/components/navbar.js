@@ -22,8 +22,6 @@ function Navbar() {
                 content.style.display = 'flex';
             }, 500);
         };
-
-        console.log(hamburgers)
     };
 
     return(

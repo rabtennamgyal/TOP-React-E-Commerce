@@ -35,11 +35,6 @@ function Home() {
                         )
                     })
                 }
-                {/* <div className="cards">
-                    <h1>
-                        Some Content
-                    </h1>
-                </div> */}
 
                 <div className='buttons' id='right'>
                     <button onClick={next}>
