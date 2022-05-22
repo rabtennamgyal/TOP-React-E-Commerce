@@ -1,8 +1,8 @@
-import one from '../../assets/catalog/manutd.jpeg';
-import two from '../../assets/catalog/manutd2.jpeg';
-import three from '../../assets/catalog/manutd3.jpeg';
+import one from '../../assets/catalog/realmadrid.webp';
+import two from '../../assets/catalog/realmadrid2.webp';
+import three from '../../assets/catalog/realmadrid3.webp';
 
-function Manutd() {
+function Madrid() {
     const arrs = [one, two, three];
 
     setInterval(() => {
@@ -11,7 +11,7 @@ function Manutd() {
         for (let i = 0; i < imgs.length; i++) {
             imgs[i].addEventListener('mouseover', () => {
                 const cur = arrs[i];
-                document.getElementById('manutdfeatured').src = cur;
+                document.getElementById('madridfeatured').src = cur;
             });
         };
     });
@@ -20,7 +20,7 @@ function Manutd() {
         <div className="productDetails">
             <div className="divOne">
                 <div className='mainimg'>
-                    <img id='manutdfeatured' src={one} alt='img' />
+                    <img id='madridfeatured' src={one} alt='img' />
                 </div>
 
                 <div className='slider'>
@@ -39,9 +39,9 @@ function Manutd() {
             </div>
 
             <div className="divTwo">
-            <div className='productTitle'>
+                <div className='productTitle'>
                     <h1>
-                        Manchester Unitd 2021 Authentic Jersey
+                        Read Madrid 2021 Authentic Jersey
                     </h1>
                 </div>
 
@@ -111,4 +111,4 @@ function Manutd() {
     )
 };
 
-export default Manutd;
+export default Madrid;

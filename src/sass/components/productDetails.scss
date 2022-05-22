@@ -9,10 +9,23 @@
         grid-template-rows: 2fr 1fr;
     }
 
+    @include respond(tab) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+
     .divOne {
         border-right:.1px solid #000;
         display: grid;
         grid-template-rows: 80% 20%;
+
+        @include respond(phone) {
+            border: none;
+        }
+
+        @include respond(tab) {
+            border: none;
+        }
 
         .mainimg {
             display: grid;
@@ -52,6 +65,132 @@
 
                     &:hover {
                         border: .1px solid #000;
+                    }
+                }
+            }
+        }
+    }
+
+    .divTwo {
+        display: grid;
+        grid-template-rows: 10% 10% 80%;
+
+        .productTitle {
+            display: grid;
+            place-items: center;
+
+            h1 {
+                color: #000;
+                font-family: Open Sans, 'Courier New', Courier, monospace;
+                font-size: 2rem;
+
+                @include respond(phone) {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .productPrice {
+            display: grid;
+            align-items: center;
+
+            p {
+                margin: 0 0 0 3.5rem;
+                color: #000;
+                font-family: Open Sans, 'Courier New', Courier, monospace;
+                font-size: 1.8rem;
+
+                @include respond(phone) {
+                    font-size: 1.5rem;
+                    margin: 0;
+                    justify-self: center;
+                }
+
+                @include respond(tab) {
+                    margin: 0;
+                    justify-self: center;
+                }
+            }
+        }
+
+        .productInfo {
+            display: grid;
+            grid-template-rows: 15% 15% 70%;
+
+            .size {
+                justify-self: center;
+                width: 85%;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+
+                .sizes {
+                    margin: 10%;
+                    cursor: pointer;
+                    border: solid black;
+                    border-radius: 5px;
+                    display: grid;
+                    place-items: center;
+
+                    &:hover {
+                        background: #70e2ff;
+                    }
+
+                    p {
+                        color: #000;
+                        font-size: 1.5rem;
+                        font-family: Open Sans, sans-serif;
+                    }
+
+                    @include respond(phone) {
+                        margin: 20%;
+                    }
+                }
+            }
+
+            .quantity {
+                display: grid;
+                place-items: center;
+                
+                select {
+                    height: 50%;
+                    width: 80%;
+                    margin: 10%;
+                    font-size: 1.3rem;
+
+                    @include respond(phone) {
+                        height: 30%;
+                        width: 50%;
+                    }
+
+                    @include respond(tab) {
+                        margin: 5%;
+                        height: 30%;
+                        width: 50%;
+                    }
+                }
+            }
+
+            .submit {
+                display: grid;
+                grid-template-rows: 20% 80%;
+
+                .addCart {
+                    display: grid;
+                    place-items: center;
+
+                    button {
+                        cursor: pointer;
+                        height: 5rem;
+                        width: 25rem;
+                        background: #000;
+                        color: #fff;
+                        transition: 0.7s ease-in-out;
+                        font-size: 2rem;
+
+                        &:hover {
+                            background: #fff;
+                            color: #000;
+                        }
                     }
                 }
             }

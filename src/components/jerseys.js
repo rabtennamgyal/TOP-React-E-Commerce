@@ -33,41 +33,45 @@ function Jerseys() {
                 </div>
             </Link>
 
-            <div className="catalogCard">
-                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
-
-                <div className='catalogCardOne'>
-                    <img src={chelsea} alt='img' />
+            <Link to='/chelsea'>
+                <div className="catalogCard">
+                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+    
+                    <div className='catalogCardOne'>
+                        <img src={chelsea} alt='img' />
+                    </div>
+    
+                    <div className='catalogCardTwo'>
+                        <h1>
+                            Chelsea Jersey
+                        </h1>
+    
+                        <p>
+                            $ 50
+                        </p>
+                    </div>
                 </div>
+            </Link>
 
-                <div className='catalogCardTwo'>
-                    <h1>
-                        Chelsea Jersey
-                    </h1>
-
-                    <p>
-                        $ 50
-                    </p>
+            <Link to='/madrid'>    
+                <div className="catalogCard">
+                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+    
+                    <div className='catalogCardOne'>
+                        <img src={realmadrid} alt='img' />
+                    </div>
+    
+                    <div className='catalogCardTwo'>
+                        <h1>
+                            Real Madrid Jersey
+                        </h1>
+    
+                        <p>
+                            $ 50
+                        </p>
+                    </div>
                 </div>
-            </div>
-
-            <div className="catalogCard">
-                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
-
-                <div className='catalogCardOne'>
-                    <img src={realmadrid} alt='img' />
-                </div>
-
-                <div className='catalogCardTwo'>
-                    <h1>
-                        Real Madrid Jersey
-                    </h1>
-
-                    <p>
-                        $ 50
-                    </p>
-                </div>
-            </div>
+            </Link>
 
             <div className="catalogCard">
                 <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
