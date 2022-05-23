@@ -60,7 +60,11 @@
                     height: 9rem;
 
                     @include respond(phone) {
-                        height: 6rem;
+                        height: 5rem;
+                    }
+
+                    @include respond(tab) {
+                        height: 7rem;
                     }
 
                     &:hover {
@@ -75,6 +79,14 @@
         display: grid;
         grid-template-rows: 10% 10% 80%;
 
+        @include respond(phone) {
+            grid-template-rows: 15% 15% 70%;
+        }
+
+        @include respond(tab) {
+            grid-template-rows: 15% 15% 70%;
+        }
+
         .productTitle {
             display: grid;
             place-items: center;
@@ -86,6 +98,10 @@
 
                 @include respond(phone) {
                     font-size: 1.5rem;
+                }
+                
+                @include respond(tab) {
+                    font-size: 1.8rem;
                 }
             }
         }
@@ -107,6 +123,7 @@
                 }
 
                 @include respond(tab) {
+                    font-size: 1.6rem;
                     margin: 0;
                     justify-self: center;
                 }
@@ -139,10 +156,22 @@
                         color: #000;
                         font-size: 1.5rem;
                         font-family: Open Sans, sans-serif;
+
+                        @include respond(phone) {
+                            font-size: 1rem;
+                        }
+    
+                        @include respond(tab) {
+                            font-size: 1.4rem;
+                        }
                     }
 
                     @include respond(phone) {
-                        margin: 20%;
+                        margin: 5% 30%;
+                    }
+
+                    @include respond(tab) {
+                        margin: 0 5%;
                     }
                 }
             }
@@ -150,7 +179,7 @@
             .quantity {
                 display: grid;
                 place-items: center;
-                
+
                 select {
                     height: 50%;
                     width: 80%;
@@ -158,14 +187,15 @@
                     font-size: 1.3rem;
 
                     @include respond(phone) {
-                        height: 30%;
-                        width: 50%;
+                        height: 3rem;
+                        width: 20rem;
+                        margin: 2rem 0;
                     }
 
                     @include respond(tab) {
-                        margin: 5%;
-                        height: 30%;
-                        width: 50%;
+                        height: 4rem;
+                        width: 25rem;
+                        margin: 2rem 0;
                     }
                 }
             }
@@ -190,6 +220,12 @@
                         &:hover {
                             background: #fff;
                             color: #000;
+                        }
+
+                        @include respond(phone) {
+                            font-size: 1.5rem;
+                            height: 3rem;
+                            width: 20rem;
                         }
                     }
                 }

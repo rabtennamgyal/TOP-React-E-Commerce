@@ -39,7 +39,7 @@ function Manutd() {
             </div>
 
             <div className="divTwo">
-            <div className='productTitle'>
+                <div className='productTitle'>
                     <h1>
                         Manchester Unitd 2021 Authentic Jersey
                     </h1>

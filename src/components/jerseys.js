@@ -73,113 +73,125 @@ function Jerseys() {
                 </div>
             </Link>
 
-            <div className="catalogCard">
-                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
-
-                <div className='catalogCardOne'>
-                    <img src={barca} alt='img' />
+            <Link to='/barca'>
+                <div className="catalogCard">
+                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+    
+                    <div className='catalogCardOne'>
+                        <img src={barca} alt='img' />
+                    </div>
+    
+                    <div className='catalogCardTwo'>
+                        <h1>
+                            Barcelona Jersey
+                        </h1>
+    
+                        <p>
+                            $ 50
+                        </p>
+                    </div>
                 </div>
+            </Link>
 
-                <div className='catalogCardTwo'>
-                    <h1>
-                        Barcelona Jersey
-                    </h1>
-
-                    <p>
-                        $ 50
-                    </p>
+            <Link to='/juve'>
+                <div className="catalogCard">
+                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+    
+                    <div className='catalogCardOne'>
+                        <img src={juve} alt='img' />
+                    </div>
+    
+                    <div className='catalogCardTwo'>
+                        <h1>
+                            Juventus Jersey
+                        </h1>
+    
+                        <p>
+                            $ 50
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </Link>
 
-            <div className="catalogCard">
-                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
-
-                <div className='catalogCardOne'>
-                    <img src={juve} alt='img' />
+            <Link to='/mancity'>
+                <div className="catalogCard">
+                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+    
+                    <div className='catalogCardOne'>
+                        <img src={mancity} alt='img' />
+                    </div>
+    
+                    <div className='catalogCardTwo'>
+                        <h1>
+                            Man City Jersey
+                        </h1>
+    
+                        <p>
+                            $ 50
+                        </p>
+                    </div>
                 </div>
-
-                <div className='catalogCardTwo'>
-                    <h1>
-                        Juventus Jersey
-                    </h1>
-
-                    <p>
-                        $ 50
-                    </p>
+            </Link>
+            
+            <Link to='/liverpool'>
+                <div className="catalogCard">
+                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+    
+                    <div className='catalogCardOne'>
+                        <img src={liverpool} alt='img' />
+                    </div>
+    
+                    <div className='catalogCardTwo'>
+                        <h1>
+                            Liverpool Jersey
+                        </h1>
+    
+                        <p>
+                            $ 50
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </Link>
 
-            <div className="catalogCard">
-                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
-
-                <div className='catalogCardOne'>
-                    <img src={mancity} alt='img' />
+            <Link to='/munich'>
+                <div className="catalogCard">
+                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+    
+                    <div className='catalogCardOne'>
+                        <img src={munich} alt='img' />
+                    </div>
+    
+                    <div className='catalogCardTwo'>
+                        <h1>
+                            Munich Jersey
+                        </h1>
+    
+                        <p>
+                            $ 50
+                        </p>
+                    </div>
                 </div>
+            </Link>
 
-                <div className='catalogCardTwo'>
-                    <h1>
-                        Man City Jersey
-                    </h1>
-
-                    <p>
-                        $ 50
-                    </p>
+            <Link to='/psg'>
+                <div className="catalogCard">
+                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+    
+                    <div className='catalogCardOne'>
+                        <img src={psg} alt='img' />
+                    </div>
+    
+                    <div className='catalogCardTwo'>
+                        <h1>
+                            Paris Saint Germain Jersey
+                        </h1>
+    
+                        <p>
+                            $ 50
+                        </p>
+                    </div>
                 </div>
-            </div>
-
-            <div className="catalogCard">
-                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
-
-                <div className='catalogCardOne'>
-                    <img src={liverpool} alt='img' />
-                </div>
-
-                <div className='catalogCardTwo'>
-                    <h1>
-                        Liverpool Jersey
-                    </h1>
-
-                    <p>
-                        $ 50
-                    </p>
-                </div>
-            </div>
-
-            <div className="catalogCard">
-                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
-
-                <div className='catalogCardOne'>
-                    <img src={munich} alt='img' />
-                </div>
-
-                <div className='catalogCardTwo'>
-                    <h1>
-                        Munich Jersey
-                    </h1>
-
-                    <p>
-                        $ 50
-                    </p>
-                </div>
-            </div>
-
-            <div className="catalogCard">
-                <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
-
-                <div className='catalogCardOne'>
-                    <img src={psg} alt='img' />
-                </div>
-
-                <div className='catalogCardTwo'>
-                    <h1>
-                        Paris Saint Germain Jersey
-                    </h1>
-
-                    <p>
-                        $ 50
-                    </p>
-                </div>
-            </div>
+            </Link>
         </div>
     )
 };

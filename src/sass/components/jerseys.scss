@@ -6,71 +6,13 @@
     grid-template-rows: repeat(3, 1fr);
 
     @include respond(phone) {
-        grid-template-columns: repeat(2, 1fr);
+        // grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     @include respond(tab) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .catalogCard {
-        margin: 5%;
-        cursor: pointer;
-        border: .1px solid #808080;
-        background: #fff;
-        display: grid;
-        grid-template-rows: 80% 20%;
-        position: relative;
-
-        &:hover {
-            border: 3px solid #a3a3a3;
-        }
-
-        #favoriteIt {
-            position: absolute;
-            top: 3%;
-            left: 92%;
-            font-size: 2rem;
-
-            @include respond(phone) {
-                left: 88%;
-            }
-        }
-        
-        .catalogCardOne {
-            display: grid;
-            place-items: center;
-
-            img {
-                max-width: 80%;
-                max-height: 80%;
-            }
-        }
-
-        .catalogCardTwo {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 0 0 1rem;
-
-            h1 {
-                font-size: 1.7rem;
-                font-family: Kanit, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-                @include respond(phone) {
-                    font-size: 1.3rem;
-                }
-            }
-
-            p {
-                font-size: 1.4rem;
-                font-family: Kanit, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-                @include respond(phone) {
-                    font-size: 1rem;
-                }
-            }
-        }
+        // grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     a {
@@ -95,6 +37,10 @@
                 top: 3%;
                 left: 92%;
                 font-size: 2rem;
+
+                &:hover {
+                    color: red;
+                }
     
                 @include respond(phone) {
                     left: 88%;
@@ -106,9 +52,8 @@
                 place-items: center;
     
                 img {
-                    // max-width: 80%;
-                    // max-height: 80%;
-                    height: 30rem;
+                    max-width: 80%;
+                    max-height: 80%;
                 }
             }
     
@@ -139,3 +84,4 @@
         }
     }
 };
+

@@ -1,8 +1,8 @@
-import one from '../../assets/catalog/chelsea.webp';
-import two from '../../assets/catalog/chelsea2.webp';
-import three from '../../assets/catalog/chelsea3.webp';
+import one from '../../assets/catalog/barca.jpeg';
+import two from '../../assets/catalog/barca2.jpeg';
+import three from '../../assets/catalog/barca3.webp';
 
-function Chelsea() {
+function Barca() {
     const arrs = [one, two, three];
 
     setInterval(() => {
@@ -11,7 +11,7 @@ function Chelsea() {
         for (let i = 0; i < imgs.length; i++) {
             imgs[i].addEventListener('mouseover', () => {
                 const cur = arrs[i];
-                document.getElementById('chelseafeatured').src = cur;
+                document.getElementById('barcafeatured').src = cur;
             });
         };
     });
@@ -20,7 +20,7 @@ function Chelsea() {
         <div className="productDetails">
             <div className="divOne">
                 <div className='mainimg'>
-                    <img id='chelseafeatured' src={one} alt='img' />
+                    <img id='barcafeatured' src={one} alt='img' />
                 </div>
 
                 <div className='slider'>
@@ -41,7 +41,7 @@ function Chelsea() {
             <div className="divTwo">
                 <div className='productTitle'>
                     <h1>
-                        Chelsea 2021 Authentic Jersey
+                        Barcalona 2021 Authentic Jersey
                     </h1>
                 </div>
 
@@ -111,4 +111,4 @@ function Chelsea() {
     )
 };
 
-export default Chelsea;
+export default Barca;
