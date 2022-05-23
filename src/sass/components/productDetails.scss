@@ -5,13 +5,13 @@
     grid-template-columns: 2fr 1fr;
 
     @include respond(phone) {
+        min-height: 130vh;
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 1fr;
     }
 
     @include respond(tab) {
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .divOne {
@@ -35,8 +35,8 @@
                 cursor: pointer;
                 height: 40rem;
 
-                @include respond(phone) {
-                    height: 30rem;
+                @include respond(tab) {
+                    height: 35rem;
                 }
             }
         }
@@ -64,7 +64,7 @@
                     }
 
                     @include respond(tab) {
-                        height: 7rem;
+                        height: 8rem;
                     }
 
                     &:hover {
@@ -83,10 +83,6 @@
             grid-template-rows: 15% 15% 70%;
         }
 
-        @include respond(tab) {
-            grid-template-rows: 15% 15% 70%;
-        }
-
         .productTitle {
             display: grid;
             place-items: center;
@@ -95,13 +91,15 @@
                 color: #000;
                 font-family: Open Sans, 'Courier New', Courier, monospace;
                 font-size: 2rem;
+                padding: 1rem;
 
                 @include respond(phone) {
                     font-size: 1.5rem;
                 }
                 
                 @include respond(tab) {
-                    font-size: 1.8rem;
+                    padding: 0;
+                    font-size: 1.5rem;
                 }
             }
         }
@@ -134,19 +132,43 @@
             display: grid;
             grid-template-rows: 15% 15% 70%;
 
+            @include respond(phone) {
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
             .size {
                 justify-self: center;
                 width: 85%;
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
+                display: flex;
+                align-items: center;
+
+                @include respond(phone) {
+                    grid-column: 1 / 4;
+                    display: grid;
+                    place-items: center;
+                    grid-template-columns: repeat(5, 1fr);
+                }
 
                 .sizes {
-                    margin: 10%;
                     cursor: pointer;
                     border: solid black;
                     border-radius: 5px;
                     display: grid;
                     place-items: center;
+                    height: 40px;
+                    width: 50px;
+                    margin: 0 1rem;
+                    
+                    @include respond(phone) {
+                        height: 45px;
+                        width: 50px;
+                    }
+
+                    @include respond(tab) {
+                        height: 30px;
+                        width: 30px;
+                    }
 
                     &:hover {
                         background: #70e2ff;
@@ -156,10 +178,6 @@
                         color: #000;
                         font-size: 1.5rem;
                         font-family: Open Sans, sans-serif;
-
-                        @include respond(phone) {
-                            font-size: 1rem;
-                        }
     
                         @include respond(tab) {
                             font-size: 1.4rem;
@@ -180,6 +198,10 @@
                 display: grid;
                 place-items: center;
 
+                @include respond(phone) {
+                    grid-column: 1 / 2;
+                }
+
                 select {
                     height: 50%;
                     width: 80%;
@@ -187,9 +209,10 @@
                     font-size: 1.3rem;
 
                     @include respond(phone) {
-                        height: 3rem;
-                        width: 20rem;
-                        margin: 2rem 0;
+                        height: 5rem;
+                        width: 10rem;
+                        margin: 0;
+                        font-size: 2rem;
                     }
 
                     @include respond(tab) {
@@ -202,31 +225,32 @@
 
             .submit {
                 display: grid;
-                grid-template-rows: 20% 80%;
+                place-items: center;
 
-                .addCart {
+                @include respond(phone) {
+                    grid-column: 2 / 4;
                     display: grid;
                     place-items: center;
+                }
+                
+                button {
+                    cursor: pointer;
+                    height: 5rem;
+                    width: 25rem;
+                    background: #000;
+                    color: #fff;
+                    transition: 0.7s ease-in-out;
+                    font-size: 2rem;
 
-                    button {
-                        cursor: pointer;
-                        height: 5rem;
-                        width: 25rem;
-                        background: #000;
-                        color: #fff;
-                        transition: 0.7s ease-in-out;
+                    &:hover {
+                        background: #fff;
+                        color: #000;
+                    }
+
+                    @include respond(phone) {
                         font-size: 2rem;
-
-                        &:hover {
-                            background: #fff;
-                            color: #000;
-                        }
-
-                        @include respond(phone) {
-                            font-size: 1.5rem;
-                            height: 3rem;
-                            width: 20rem;
-                        }
+                        height: 5rem;
+                        width: 90%;
                     }
                 }
             }

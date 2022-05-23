@@ -1,3 +1,6 @@
+1. Make the mobile menu close when a link is clicked.
+
+
 
 # Getting Started with Create React App
 

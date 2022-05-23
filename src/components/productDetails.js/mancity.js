@@ -96,15 +96,9 @@ function Mancity() {
                     </div>
 
                     <div className='submit'>
-                        <div>
-
-                        </div>
-
-                        <div className='addCart'>
-                            <button>
-                                Add Cart
-                            </button>
-                        </div>
+                        <button>
+                            Add Cart
+                        </button>
                     </div>
                 </div>
             </div>
