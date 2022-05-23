@@ -35,6 +35,10 @@
                 cursor: pointer;
                 height: 40rem;
 
+                @include respond(phone) {
+                    height: 35rem;
+                }
+
                 @include respond(tab) {
                     height: 35rem;
                 }
@@ -144,7 +148,15 @@
                 align-items: center;
 
                 @include respond(phone) {
+                    width: 100%;
                     grid-column: 1 / 4;
+                    display: grid;
+                    place-items: center;
+                    grid-template-columns: repeat(5, 1fr);
+                }
+
+                @include respond(tab) {
+                    width: 100%;
                     display: grid;
                     place-items: center;
                     grid-template-columns: repeat(5, 1fr);
@@ -161,8 +173,9 @@
                     margin: 0 1rem;
                     
                     @include respond(phone) {
-                        height: 45px;
-                        width: 50px;
+                        margin: 0;
+                        height: 35px;
+                        width: 40px;
                     }
 
                     @include respond(tab) {
@@ -229,8 +242,6 @@
 
                 @include respond(phone) {
                     grid-column: 2 / 4;
-                    display: grid;
-                    place-items: center;
                 }
                 
                 button {
@@ -250,7 +261,7 @@
                     @include respond(phone) {
                         font-size: 2rem;
                         height: 5rem;
-                        width: 90%;
+                        width: 80%;
                     }
                 }
             }
