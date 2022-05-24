@@ -1,9 +1,9 @@
 import { useState } from "react";
-import carousalData from "../assets/carousalData";
-import jersey from "../assets/soccer-jersey.png";
-import shorts from "../assets/football-shorts.png";
-import cleats from "../assets/cleats.png";
-import ball from "../assets/football.png";
+import carousalData from "../assets/random/carousalData";
+import jersey from "../assets/random/soccer-jersey.png";
+import shorts from "../assets/random/football-shorts.png";
+import cleats from "../assets/random/cleats.png";
+import ball from "../assets/random/football.png";
 
 function Home() {    
     const [cur, setcur] = useState(0);

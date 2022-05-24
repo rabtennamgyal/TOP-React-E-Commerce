@@ -2,7 +2,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Home from "./components/home";
 import Jerseys from './components/jerseys';
+import Shorts from "./components/shorts";
 import Footer from "./components/footer";
+
+// Jersey Links
 import Manutd from "./components/productDetails.js/manutd";
 import Chelsea from "./components/productDetails.js/chelsea";
 import Madrid from "./components/productDetails.js/madrid";
@@ -12,6 +15,13 @@ import Mancity from "./components/productDetails.js/mancity";
 import Liverpool from "./components/productDetails.js/liverpool";
 import Munich from "./components/productDetails.js/munich";
 import Psg from "./components/productDetails.js/psg";
+
+// Shorts Links
+import ManutdShorts from "./components/shortsDetails.js/manutd";
+import ChelseaShorts from "./components/shortsDetails.js/chelsea";
+import UsaShorts from "./components/shortsDetails.js/usa";
+import PsgShorts from "./components/shortsDetails.js/psg";
+import BarcaShorts from "./components/shortsDetails.js/barca";
 
 
 function RoutesSwitch() {
@@ -30,6 +40,12 @@ function RoutesSwitch() {
                 <Route path="/liverpool" element={<Liverpool />} />
                 <Route path="/munich" element={<Munich />} />
                 <Route path="/psg" element={<Psg />} />
+                <Route path="/shorts" element={<Shorts />} />
+                <Route path="/manutdshort" element={<ManutdShorts />} />
+                <Route path="/chelseashort" element={<ChelseaShorts />} />
+                <Route path="/usashort" element={<UsaShorts />} />
+                <Route path="/psgshort" element={<PsgShorts />} />
+                <Route path="/barcashort" element={<BarcaShorts />} />
             </Routes>
             <Footer />
         </BrowserRouter>

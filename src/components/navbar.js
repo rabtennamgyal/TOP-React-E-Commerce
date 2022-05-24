@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 function Navbar() {
-    
     const showMobileMenu = () => {
         const hamburgers = document.querySelectorAll('.hamburgers');
         const mobileMenu = document.querySelector('.mobileMenu');
@@ -26,10 +25,6 @@ function Navbar() {
 
     return(
         <div className='navbar'>
-            {/* <span className="hoverer" id='hoverer'>
-
-            </span> */}
-
             <div className='navOne navBox'>
                 <Link to='/'>
                     <li className="links">
@@ -43,10 +38,12 @@ function Navbar() {
                     </li>
                 </Link>
 
-                <li className="links">
-                    Shorts
-                </li>
-    
+                <Link to='/shorts'>
+                    <li className="links">
+                        Shorts
+                    </li>
+                </Link>
+
                 <li className="links">
                     Footwears
                 </li>
@@ -80,21 +77,23 @@ function Navbar() {
 
             <div className="mobileMenu">
                 <div className="mobileMenuContent">
-                    <Link to='/'>
+                    <Link to='/' onClick={showMobileMenu}>
                         <li>
                             Home
                         </li>
                     </Link>
     
-                    <Link to='/jersey'>
+                    <Link to='/jersey' onClick={showMobileMenu}>
                         <li>
                             Jerseys
                         </li>
                     </Link>
 
-                    <li>
-                        Shorts
-                    </li>
+                    <Link to='/shorts' onClick={showMobileMenu}>
+                        <li>
+                            Shorts
+                        </li>
+                    </Link>
 
                     <li>
                         Footwears
