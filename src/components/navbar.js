@@ -43,16 +43,14 @@ function Navbar() {
                         Shorts
                     </li>
                 </Link>
-
-                <li className="links">
-                    Footwears
-                </li>
             </div>
 
             <div className='navTwo navBox'>
-                <li className="links">
-                    <ion-icon name="heart-outline"></ion-icon>
-                </li>
+                <Link to='/favorites'>
+                    <li className="links">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </li>
+                </Link>
 
                 <li className="links">
                     <ion-icon name="person-outline"></ion-icon>
@@ -94,22 +92,6 @@ function Navbar() {
                             Shorts
                         </li>
                     </Link>
-
-                    <li>
-                        Footwears
-                    </li>
-
-                {/* <Link>
-                    <li>
-                        Shorts
-                    </li>
-                </Link>
-
-                <Link>
-                    <li>
-                        Footwears
-                    </li>
-                </Link> */}
                 </div>
             </div>
         </div>

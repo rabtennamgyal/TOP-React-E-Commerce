@@ -1,8 +1,8 @@
-import one from '../../assets/shorts/manutd.webp';
-import two from '../../assets/shorts/manutd2.webp';
-import three from '../../assets/shorts/manutd3.webp';
+import one from '../../assets/shorts/liverpool.webp';
+import two from '../../assets/shorts/liverpool2.webp';
+import three from '../../assets/shorts/liverpool3.webp';
 
-function ManutdShorts() {
+function LiverpoolShorts() {
     const arrs = [one, two, three];
 
     setInterval(() => {
@@ -11,7 +11,7 @@ function ManutdShorts() {
         for (let i = 0; i < imgs.length; i++) {
             imgs[i].addEventListener('mouseover', () => {
                 const cur = arrs[i];
-                document.getElementById('manutdshorts').src = cur;
+                document.getElementById('liverpoolshorts').src = cur;
             });
         };
     });
@@ -20,7 +20,7 @@ function ManutdShorts() {
         <div className="productDetails">
             <div className="divOne">
                 <div className='mainimg'>
-                    <img id='manutdshorts' src={one} alt='img' />
+                    <img id='liverpoolshorts' src={one} alt='img' />
                 </div>
 
                 <div className='slider'>
@@ -41,7 +41,7 @@ function ManutdShorts() {
             <div className="divTwo">
                 <div className='productTitle'>
                     <h1>
-                        Manchester United Shorts
+                        Liverpool Authentic Shorts
                     </h1>
                 </div>
 
@@ -105,4 +105,4 @@ function ManutdShorts() {
     )
 };
 
-export default ManutdShorts;
+export default LiverpoolShorts;

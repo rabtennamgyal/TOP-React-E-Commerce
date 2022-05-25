@@ -1,0 +1,19 @@
+.favorites {
+    min-height: 100vh;
+    max-height: auto;
+    display: grid;
+    grid-template-rows: 10% 90%;
+
+    .title {
+        display: grid;
+        align-items: center;
+
+        h1 {
+            color: #000;
+            margin: 1rem 3rem;
+            font-size: 2rem;
+            font-family: Open Sans, 'Courier New', Courier, monospace;
+        }
+    }
+};
+
