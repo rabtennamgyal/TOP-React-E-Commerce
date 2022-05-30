@@ -10,21 +10,13 @@ import munich from '../assets/catalog/munich.webp';
 import psg from '../assets/catalog/psg.webp';
 
 
-function Jerseys() {
-    const addToWishList = (e, item) => {
-        if (e.target.id === 'favoriteIt') {
-            e.preventDefault();
-            console.log('woking');
-            console.log(e.target.parentElement);
-        };
-    };
-
+function Jerseys({ addToWishList }) {
     return (
         <div className="jerseys">
             <Link to='/manutd'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt' onClick={addToWishList}></ion-icon>
-    
+                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
+
                     <div className='catalogCardOne'>
                         <img src={manutd} alt='img' />
                     </div>
@@ -43,7 +35,7 @@ function Jerseys() {
 
             <Link to='/chelsea'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={chelsea} alt='img' />
@@ -63,7 +55,7 @@ function Jerseys() {
 
             <Link to='/madrid'>    
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={realmadrid} alt='img' />
@@ -83,7 +75,7 @@ function Jerseys() {
 
             <Link to='/barca'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={barca} alt='img' />
@@ -103,7 +95,7 @@ function Jerseys() {
 
             <Link to='/juve'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={juve} alt='img' />
@@ -123,7 +115,7 @@ function Jerseys() {
 
             <Link to='/mancity'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={mancity} alt='img' />
@@ -143,7 +135,7 @@ function Jerseys() {
             
             <Link to='/liverpool'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={liverpool} alt='img' />
@@ -163,7 +155,7 @@ function Jerseys() {
 
             <Link to='/munich'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={munich} alt='img' />
@@ -183,7 +175,7 @@ function Jerseys() {
 
             <Link to='/psg'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={psg} alt='img' />

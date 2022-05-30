@@ -30,12 +30,51 @@ import LiverpoolShorts from "./components/shortsDetails.js/liverpool";
 
 
 function RoutesSwitch() {
+    const wishlist = [];
+
+    const addToWishList = (e) => {
+        e.preventDefault();
+
+        if (!e.target.classList.contains('favorited')) {
+            e.target.classList.add('favorited');
+            e.target.style.color = 'red';
+
+            const parent = e.target.parentElement;
+            const itemImg = parent.childNodes[1].childNodes[0].src;
+            const itemName = parent.childNodes[2].childNodes[0].textContent;
+            const itemPrice = parent.childNodes[2].childNodes[1].textContent;
+    
+            const obj = {
+                item: itemName,
+                img: itemImg,
+                price: itemPrice
+            };
+    
+            wishlist.push(obj);
+        } else {
+            e.target.classList.remove('favorited');
+            e.target.style.color = '#000';
+            const parent = e.target.parentElement;
+            const itemName = parent.childNodes[2].childNodes[0].textContent;
+            let index;
+
+            wishlist.forEach((el, i) => {
+                if (el.item === itemName) {
+                    index = i;
+                }
+            });
+
+            wishlist.splice(index, 1);
+        }
+        
+    };
+
     return (
         <BrowserRouter>
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/jersey" element={<Jerseys />} />
+                <Route path="/jersey" element={<Jerseys addToWishList={addToWishList} />} />
                 <Route path="/manutd" element={<Manutd />} />
                 <Route path="/chelsea" element={<Chelsea />} />
                 <Route path="/madrid" element={<Madrid />} />
@@ -57,7 +96,7 @@ function RoutesSwitch() {
                 <Route path="/clubshort" element={<ClubShorts />} />
                 <Route path="/liverpoolshort" element={<LiverpoolShorts />} />
 
-                <Route path="/favorites" element={<Favorites />} />
+                <Route path="/favorites" element={<Favorites wishlist={wishlist} />} />
             </Routes>
             <Footer />
         </BrowserRouter>

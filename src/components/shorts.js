@@ -15,7 +15,7 @@ function Shorts() {
         <div className='shorts'>
             <Link to='/manutdshort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={manutd} alt='img' />
@@ -35,7 +35,7 @@ function Shorts() {
 
             <Link to='/chelseashort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={chelsea} alt='img' />
@@ -55,7 +55,7 @@ function Shorts() {
 
             <Link to='/usashort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={usa} alt='img' />
@@ -75,7 +75,7 @@ function Shorts() {
 
             <Link to='/psgshort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={psg} alt='img' />
@@ -95,7 +95,7 @@ function Shorts() {
 
             <Link to='/barcashort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={barca} alt='img' />
@@ -115,7 +115,7 @@ function Shorts() {
 
             <Link to='/munichshort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={munich} alt='img' />
@@ -135,7 +135,7 @@ function Shorts() {
 
             <Link to='/mancityshort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={mancity} alt='img' />
@@ -155,7 +155,7 @@ function Shorts() {
 
             <Link to='/clubshort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={club} alt='img' />
@@ -175,7 +175,7 @@ function Shorts() {
 
             <Link to='/liverpoolshort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart-outline" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={liverpool} alt='img' />
