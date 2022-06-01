@@ -1,5 +1,5 @@
 .favorites {
-    min-height: 80vh;
+    min-height: 120vh;
     max-height: auto;
     display: grid;
     grid-template-rows: 10% 90%;
@@ -17,12 +17,23 @@
     }
 
     .items {
+        min-height: 150vh;
+        max-height: auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: 90%;
         justify-self: center;
 
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        };
+
+        @include respond(tab) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
         .itemsContent {
+            cursor: pointer;
             display: flex;
             flex-direction: column;
             align-items: center;

@@ -29,9 +29,9 @@ import ClubShorts from "./components/shortsDetails.js/club";
 import LiverpoolShorts from "./components/shortsDetails.js/liverpool";
 
 
-function RoutesSwitch() {
-    const wishlist = [];
 
+function RoutesSwitch() {
+    // need to change the name of the function.
     const addToWishList = (e) => {
         e.preventDefault();
 
@@ -50,24 +50,29 @@ function RoutesSwitch() {
                 price: itemPrice
             };
     
-            wishlist.push(obj);
+            localStorage.setItem(itemName, JSON.stringify(obj));
         } else {
             e.target.classList.remove('favorited');
             e.target.style.color = '#000';
             const parent = e.target.parentElement;
             const itemName = parent.childNodes[2].childNodes[0].textContent;
-            let index;
 
-            wishlist.forEach((el, i) => {
-                if (el.item === itemName) {
-                    index = i;
-                }
-            });
-
-            wishlist.splice(index, 1);
+            localStorage.removeItem(itemName);
         }
-        
     };
+    
+
+    // const jerseys = {...localStorage};
+    // let x = Object.keys(jerseys);
+    // //localStorage.setItem('currentFavorites', );
+    // console.log(x)
+
+    // x.forEach(el => {
+    //     //console.log(el);
+    //     const element = document.getElementById(el);
+    // });
+
+    //console.log(x);
 
     return (
         <BrowserRouter>
@@ -96,7 +101,7 @@ function RoutesSwitch() {
                 <Route path="/clubshort" element={<ClubShorts />} />
                 <Route path="/liverpoolshort" element={<LiverpoolShorts />} />
 
-                <Route path="/favorites" element={<Favorites wishlist={wishlist} />} />
+                <Route path="/favorites" element={<Favorites />} />
             </Routes>
             <Footer />
         </BrowserRouter>

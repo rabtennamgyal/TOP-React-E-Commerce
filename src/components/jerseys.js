@@ -8,14 +8,27 @@ import mancity from '../assets/catalog/mancity.jpg';
 import liverpool from '../assets/catalog/liverpool.webp';
 import munich from '../assets/catalog/munich.webp';
 import psg from '../assets/catalog/psg.webp';
+import { useEffect } from 'react';
 
+// maybe I need a useState to trigger the function 
 
 function Jerseys({ addToWishList }) {
+    useEffect(() => {
+        const allFavs = localStorage.getItem('arr') ? JSON.parse(localStorage.getItem('arr')) : [];
+
+        allFavs.forEach(el => {
+            if (el.item !== undefined) {
+                console.log(el.item);
+                document.getElementById(el.item).style.color = 'red';
+            }
+        })
+    });
+
     return (
         <div className="jerseys">
             <Link to='/manutd'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='Man Utd Jersey' onClick={addToWishList}></ion-icon>
 
                     <div className='catalogCardOne'>
                         <img src={manutd} alt='img' />
@@ -35,7 +48,7 @@ function Jerseys({ addToWishList }) {
 
             <Link to='/chelsea'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='Chelsea Jersey' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={chelsea} alt='img' />
