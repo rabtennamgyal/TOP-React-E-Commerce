@@ -18,7 +18,6 @@ function Jerseys({ addToWishList }) {
 
         allFavs.forEach(el => {
             if (el.item !== undefined) {
-                console.log(el.item);
                 document.getElementById(el.item).style.color = 'red';
             }
         })
@@ -68,7 +67,7 @@ function Jerseys({ addToWishList }) {
 
             <Link to='/madrid'>    
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='Real Madrid Jersey' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={realmadrid} alt='img' />
@@ -88,7 +87,7 @@ function Jerseys({ addToWishList }) {
 
             <Link to='/barca'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='Barcalona Jersey' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={barca} alt='img' />
@@ -96,7 +95,7 @@ function Jerseys({ addToWishList }) {
     
                     <div className='catalogCardTwo'>
                         <h1>
-                            Barcelona Jersey
+                            Barcalona Jersey
                         </h1>
     
                         <p>
@@ -108,7 +107,7 @@ function Jerseys({ addToWishList }) {
 
             <Link to='/juve'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='Juventus Jersey' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={juve} alt='img' />
@@ -128,7 +127,7 @@ function Jerseys({ addToWishList }) {
 
             <Link to='/mancity'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='Man City Jersey' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={mancity} alt='img' />
@@ -148,7 +147,7 @@ function Jerseys({ addToWishList }) {
             
             <Link to='/liverpool'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='Liverpool Jersey' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={liverpool} alt='img' />
@@ -168,7 +167,7 @@ function Jerseys({ addToWishList }) {
 
             <Link to='/munich'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='Munich Jersey' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={munich} alt='img' />
@@ -188,7 +187,7 @@ function Jerseys({ addToWishList }) {
 
             <Link to='/psg'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList}></ion-icon>
+                    <ion-icon name="heart" id='PSG Jersey' onClick={addToWishList}></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={psg} alt='img' />
@@ -196,7 +195,7 @@ function Jerseys({ addToWishList }) {
     
                     <div className='catalogCardTwo'>
                         <h1>
-                            Paris Saint Germain Jersey
+                            PSG Jersey
                         </h1>
     
                         <p>

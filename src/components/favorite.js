@@ -1,16 +1,7 @@
 /* eslint-disable array-callback-return */
-//import { useEffect } from "react";
 
 function Favorites() {
     const wishlist = localStorage.getItem('arr') ? JSON.parse(localStorage.getItem('arr')) : [];
-    console.log(wishlist);
-
-    const madrid = localStorage.getItem('Real Madrid Jersey') ? JSON.parse(localStorage.getItem('Real Madrid Jersey')) : '';
-    const manutd = localStorage.getItem('Man Utd Jersey') ? JSON.parse(localStorage.getItem('Man Utd Jersey')) : '';
-    const chelsea = localStorage.getItem('Chelsea Jersey') ? JSON.parse(localStorage.getItem('Chelsea Jersey')) : '';
-
-    const arr = [manutd, chelsea, madrid];
-    localStorage.setItem('arr', JSON.stringify(arr));
 
     return (
         <div className="favorites">

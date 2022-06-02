@@ -31,12 +31,12 @@ import LiverpoolShorts from "./components/shortsDetails.js/liverpool";
 
 
 function RoutesSwitch() {
-    // need to change the name of the function.
+    // Need to make sure the favorites page get updated immmediately.
+    // Can use useState().
     const addToWishList = (e) => {
         e.preventDefault();
 
-        if (!e.target.classList.contains('favorited')) {
-            e.target.classList.add('favorited');
+        if (e.target.style.color !== 'red') {
             e.target.style.color = 'red';
 
             const parent = e.target.parentElement;
@@ -51,28 +51,41 @@ function RoutesSwitch() {
             };
     
             localStorage.setItem(itemName, JSON.stringify(obj));
+            
+            const madrid = localStorage.getItem('Real Madrid Jersey') ? JSON.parse(localStorage.getItem('Real Madrid Jersey')) : '';
+            const manutd = localStorage.getItem('Man Utd Jersey') ? JSON.parse(localStorage.getItem('Man Utd Jersey')) : '';
+            const chelsea = localStorage.getItem('Chelsea Jersey') ? JSON.parse(localStorage.getItem('Chelsea Jersey')) : '';
+            const barca = localStorage.getItem('Barcalona Jersey') ? JSON.parse(localStorage.getItem('Barcalona Jersey')) : '';
+            const juventus = localStorage.getItem('Juventus Jersey') ? JSON.parse(localStorage.getItem('Juventus Jersey')) : '';
+            const mancity = localStorage.getItem('Man City Jersey') ? JSON.parse(localStorage.getItem('Man City Jersey')) : '';
+            const liverpool = localStorage.getItem('Liverpool Jersey') ? JSON.parse(localStorage.getItem('Liverpool Jersey')) : '';
+            const munich = localStorage.getItem('Munich Jersey') ? JSON.parse(localStorage.getItem('Munich Jersey')) : '';
+            const psg = localStorage.getItem('PSG Jersey') ? JSON.parse(localStorage.getItem('PSG Jersey')) : '';
+
+            const arr = [manutd, chelsea, madrid, barca, juventus, mancity, liverpool, munich, psg]; // this arr data get turn into wishlist.
+            localStorage.setItem('arr', JSON.stringify(arr));
         } else {
-            e.target.classList.remove('favorited');
             e.target.style.color = '#000';
+            
             const parent = e.target.parentElement;
             const itemName = parent.childNodes[2].childNodes[0].textContent;
 
             localStorage.removeItem(itemName);
+
+            const madrid = localStorage.getItem('Real Madrid Jersey') ? JSON.parse(localStorage.getItem('Real Madrid Jersey')) : '';
+            const manutd = localStorage.getItem('Man Utd Jersey') ? JSON.parse(localStorage.getItem('Man Utd Jersey')) : '';
+            const chelsea = localStorage.getItem('Chelsea Jersey') ? JSON.parse(localStorage.getItem('Chelsea Jersey')) : '';
+            const barca = localStorage.getItem('Barcalona Jersey') ? JSON.parse(localStorage.getItem('Barcalona Jersey')) : '';
+            const juventus = localStorage.getItem('Juventus Jersey') ? JSON.parse(localStorage.getItem('Juventus Jersey')) : '';
+            const mancity = localStorage.getItem('Man City Jersey') ? JSON.parse(localStorage.getItem('Man City Jersey')) : '';
+            const liverpool = localStorage.getItem('Liverpool Jersey') ? JSON.parse(localStorage.getItem('Liverpool Jersey')) : '';
+            const munich = localStorage.getItem('Munich Jersey') ? JSON.parse(localStorage.getItem('Munich Jersey')) : '';
+            const psg = localStorage.getItem('PSG Jersey') ? JSON.parse(localStorage.getItem('PSG Jersey')) : '';
+        
+            const arr = [manutd, chelsea, madrid, barca, juventus, mancity, liverpool, munich, psg]; 
+            localStorage.setItem('arr', JSON.stringify(arr));
         }
     };
-    
-
-    // const jerseys = {...localStorage};
-    // let x = Object.keys(jerseys);
-    // //localStorage.setItem('currentFavorites', );
-    // console.log(x)
-
-    // x.forEach(el => {
-    //     //console.log(el);
-    //     const element = document.getElementById(el);
-    // });
-
-    //console.log(x);
 
     return (
         <BrowserRouter>
@@ -109,3 +122,6 @@ function RoutesSwitch() {
 };
 
 export default RoutesSwitch;
+
+
+
