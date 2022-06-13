@@ -10,12 +10,12 @@ import club from '../assets/shorts/club.webp';
 import liverpool from '../assets/shorts/liverpool.webp';
 
 
-function Shorts() {
+function Shorts({ addToWishList2 }) {
     return (
         <div className='shorts'>
             <Link to='/manutdshort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList2} ></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={manutd} alt='img' />

@@ -31,8 +31,6 @@ import LiverpoolShorts from "./components/shortsDetails.js/liverpool";
 
 
 function RoutesSwitch() {
-    // Need to make sure the favorites page get updated immmediately.
-    // Can use useState().
     const addToWishList = (e) => {
         e.preventDefault();
 
@@ -87,6 +85,12 @@ function RoutesSwitch() {
         }
     };
 
+    const addToWishList2 = (e) => {
+        e.preventDefault();
+
+        console.log('adding shorts to favorites');
+    };
+
     return (
         <BrowserRouter>
             <Navbar />
@@ -103,7 +107,7 @@ function RoutesSwitch() {
                 <Route path="/munich" element={<Munich />} />
                 <Route path="/psg" element={<Psg />} />
 
-                <Route path="/shorts" element={<Shorts />} />
+                <Route path="/shorts" element={<Shorts addToWishList2={addToWishList2} />} />
                 <Route path="/manutdshort" element={<ManutdShorts />} />
                 <Route path="/chelseashort" element={<ChelseaShorts />} />
                 <Route path="/usashort" element={<UsaShorts />} />
