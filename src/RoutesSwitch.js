@@ -40,7 +40,6 @@ function RoutesSwitch() {
             const parent = e.target.parentElement;
             const itemImg = parent.childNodes[1].childNodes[0].src;
             const itemName = parent.childNodes[2].childNodes[0].textContent;
-            console.log(itemName);
             const itemPrice = parent.childNodes[2].childNodes[1].textContent;
     
             const obj = {
@@ -62,11 +61,11 @@ function RoutesSwitch() {
             const munich = localStorage.getItem('Munich Jersey') ? JSON.parse(localStorage.getItem('Munich Jersey')) : '';
             const psg = localStorage.getItem('PSG Jersey') ? JSON.parse(localStorage.getItem('PSG Jersey')) : '';
             // Shorts
-            const usa = localStorage.getItem('USA Shorts') ? JSON.parse(localStorage.getItem('USA Shorts')) : '';
             const manutd2 = localStorage.getItem('Man Utd Shorts') ? JSON.parse(localStorage.getItem('Man Utd Shorts')) : '';
             const chelsea2 = localStorage.getItem('Chelsea Shorts') ? JSON.parse(localStorage.getItem('Chelsea Shorts')) : '';
+            const usa = localStorage.getItem('USA Shorts') ? JSON.parse(localStorage.getItem('USA Shorts')) : '';
             const barca2 = localStorage.getItem('Barcalona Shorts') ? JSON.parse(localStorage.getItem('Barcalona Shorts')) : '';
-            const mancity2 = localStorage.getItem('Manchester City Shorts') ? JSON.parse(localStorage.getItem('Man City Shorts')) : '';
+            const mancity2 = localStorage.getItem('Man City Shorts') ? JSON.parse(localStorage.getItem('Man City Shorts')) : '';
             const munich2 = localStorage.getItem('Munich Shorts') ? JSON.parse(localStorage.getItem('Munich Shorts')) : '';
             const psg2 = localStorage.getItem('PSG Shorts') ? JSON.parse(localStorage.getItem('PSG Shorts')) : '';
             const liverpool2 = localStorage.getItem('Liverpool Shorts') ? JSON.parse(localStorage.getItem('Liverpool Shorts')) : '';
@@ -97,11 +96,11 @@ function RoutesSwitch() {
             const munich = localStorage.getItem('Munich Jersey') ? JSON.parse(localStorage.getItem('Munich Jersey')) : '';
             const psg = localStorage.getItem('PSG Jersey') ? JSON.parse(localStorage.getItem('PSG Jersey')) : '';
             // Shorts
-            const usa = localStorage.getItem('USA Shorts') ? JSON.parse(localStorage.getItem('USA Shorts')) : '';
             const manutd2 = localStorage.getItem('Man Utd Shorts') ? JSON.parse(localStorage.getItem('Man Utd Shorts')) : '';
             const chelsea2 = localStorage.getItem('Chelsea Shorts') ? JSON.parse(localStorage.getItem('Chelsea Shorts')) : '';
+            const usa = localStorage.getItem('USA Shorts') ? JSON.parse(localStorage.getItem('USA Shorts')) : '';
             const barca2 = localStorage.getItem('Barcalona Shorts') ? JSON.parse(localStorage.getItem('Barcalona Shorts')) : '';
-            const mancity2 = localStorage.getItem('Manchester City Shorts') ? JSON.parse(localStorage.getItem('Man City Shorts')) : '';
+            const mancity2 = localStorage.getItem('Man City Shorts') ? JSON.parse(localStorage.getItem('Man City Shorts')) : '';
             const munich2 = localStorage.getItem('Munich Shorts') ? JSON.parse(localStorage.getItem('Munich Shorts')) : '';
             const psg2 = localStorage.getItem('PSG Shorts') ? JSON.parse(localStorage.getItem('PSG Shorts')) : '';
             const liverpool2 = localStorage.getItem('Liverpool Shorts') ? JSON.parse(localStorage.getItem('Liverpool Shorts')) : '';
