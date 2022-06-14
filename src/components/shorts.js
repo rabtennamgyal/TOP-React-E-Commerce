@@ -8,14 +8,25 @@ import munich from '../assets/shorts/munich.webp';
 import mancity from '../assets/shorts/mancity.webp';
 import club from '../assets/shorts/club.webp';
 import liverpool from '../assets/shorts/liverpool.webp';
+import { useEffect } from 'react';
 
 
-function Shorts({ addToWishList2 }) {
+function Shorts({ addToWishList }) {
+    useEffect(() => {
+        const allFavs = localStorage.getItem('arr') ? JSON.parse(localStorage.getItem('arr')) : [];
+
+        allFavs.forEach(el => {
+            if (el.item) {
+                document.getElementById(el.item).style.color = 'red';
+            }
+        })
+    });
+
     return (
         <div className='shorts'>
             <Link to='/manutdshort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt' onClick={addToWishList2} ></ion-icon>
+                    <ion-icon name="heart" id='Man Utd Shorts' onClick={addToWishList} ></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={manutd} alt='img' />
@@ -23,7 +34,7 @@ function Shorts({ addToWishList2 }) {
     
                     <div className='catalogCardTwo'>
                         <h1>
-                            Manchester United Shorts
+                            Man Utd Shorts
                         </h1>
     
                         <p>
@@ -35,7 +46,7 @@ function Shorts({ addToWishList2 }) {
 
             <Link to='/chelseashort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='Chelsea Shorts'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={chelsea} alt='img' />
@@ -55,7 +66,7 @@ function Shorts({ addToWishList2 }) {
 
             <Link to='/usashort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='USA Shorts'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={usa} alt='img' />
@@ -75,7 +86,7 @@ function Shorts({ addToWishList2 }) {
 
             <Link to='/psgshort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='PSG Shorts'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={psg} alt='img' />
@@ -95,7 +106,7 @@ function Shorts({ addToWishList2 }) {
 
             <Link to='/barcashort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='Barcalona Shorts'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={barca} alt='img' />
@@ -115,7 +126,7 @@ function Shorts({ addToWishList2 }) {
 
             <Link to='/munichshort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='Munich Shorts'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={munich} alt='img' />
@@ -123,7 +134,7 @@ function Shorts({ addToWishList2 }) {
     
                     <div className='catalogCardTwo'>
                         <h1>
-                            Bayern Munich Shorts
+                            Munich Shorts
                         </h1>
     
                         <p>
@@ -135,7 +146,7 @@ function Shorts({ addToWishList2 }) {
 
             <Link to='/mancityshort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='Man City Shorts'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={mancity} alt='img' />
@@ -143,7 +154,7 @@ function Shorts({ addToWishList2 }) {
     
                     <div className='catalogCardTwo'>
                         <h1>
-                            Manchester City Shorts
+                            Man City Shorts
                         </h1>
     
                         <p>
@@ -155,7 +166,7 @@ function Shorts({ addToWishList2 }) {
 
             <Link to='/clubshort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='Club America Shorts'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={club} alt='img' />
@@ -175,7 +186,7 @@ function Shorts({ addToWishList2 }) {
 
             <Link to='/liverpoolshort'>
                 <div className="catalogCard">
-                    <ion-icon name="heart" id='favoriteIt'></ion-icon>
+                    <ion-icon name="heart" id='Liverpool Shorts'></ion-icon>
     
                     <div className='catalogCardOne'>
                         <img src={liverpool} alt='img' />
