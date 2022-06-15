@@ -15,8 +15,9 @@ import { useEffect } from 'react';
 function Jerseys({ addToWishList }) {
     useEffect(() => {
         const allFavs = localStorage.getItem('arr') ? JSON.parse(localStorage.getItem('arr')) : [];
+        const jerseys = allFavs.splice(0, Math.ceil(allFavs.length / 2)); 
 
-        allFavs.forEach(el => {
+        jerseys.forEach(el => {
             if (el.item !== undefined) {
                 document.getElementById(el.item).style.color = 'red';
             }

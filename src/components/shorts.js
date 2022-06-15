@@ -14,6 +14,7 @@ import { useEffect } from 'react';
 function Shorts({ addToWishList }) {
     useEffect(() => {
         const allFavs = localStorage.getItem('arr') ? JSON.parse(localStorage.getItem('arr')) : [];
+        // eslint-disable-next-line no-unused-vars
         const shorts = allFavs.splice(0, Math.ceil(allFavs.length / 2)); 
 
         allFavs.forEach(el => {
@@ -22,7 +23,7 @@ function Shorts({ addToWishList }) {
             }
         });
     });
-
+    
     return (
         <div className='shorts'>
             <Link to='/manutdshort'>
