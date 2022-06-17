@@ -4,6 +4,7 @@ import Home from "./components/home";
 import Jerseys from './components/jerseys';
 import Shorts from "./components/shorts";
 import Favorites from "./components/favorite";
+import Cart from "./components/cart";
 import Footer from "./components/footer";
 
 // Jersey Links
@@ -27,6 +28,7 @@ import MunichShorts from "./components/shortsDetails.js/munich";
 import MancityShorts from "./components/shortsDetails.js/mancity";
 import ClubShorts from "./components/shortsDetails.js/club";
 import LiverpoolShorts from "./components/shortsDetails.js/liverpool";
+
 
 
 
@@ -143,6 +145,7 @@ function RoutesSwitch() {
                 <Route path="/liverpoolshort" element={<LiverpoolShorts />} />
 
                 <Route path="/favorites" element={<Favorites />} />
+                <Route path="/cart" element={<Cart />} />
             </Routes>
             <Footer />
         </BrowserRouter>

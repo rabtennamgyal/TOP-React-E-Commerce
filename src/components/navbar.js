@@ -56,15 +56,17 @@ function Navbar() {
                     <ion-icon name="person-outline"></ion-icon>
                 </li>
 
-                <li className='links' id='cart'>
-                    <ion-icon name="cart-outline"></ion-icon>
-
-                    <div id="cartItems">
-                        <p>    
-                            0
-                        </p>
-                    </div>
-                </li>
+                <Link to='/cart'>
+                    <li className='links' id='cart'>
+                        <ion-icon name="cart-outline"></ion-icon>
+    
+                        <div id="cartItems">
+                            <p>    
+                                0
+                            </p>
+                        </div>
+                    </li>
+                </Link>
             </div>
 
             <div className='hamburger' onClick={showMobileMenu}>

@@ -1,0 +1,54 @@
+.cart {
+    min-height: 100vh;
+    max-height: auto;
+    display: grid;
+    place-items: center;
+
+    .emptyCart {
+        height: 100%;
+        display: grid;
+        grid-template-rows: 80% 20%;
+
+        @include respond(phone) {
+            height: 100%;
+            width: 100%;
+        }
+
+        @include respond(tab) {
+            height: 100%;
+            width: 70%;
+        }
+
+        .emptyCartImg {
+            display: grid;
+            place-items: center;
+
+            img {
+                justify-self: center;
+    
+                @include respond(phone) {
+                    align-self: center;
+                    height: 30rem;
+                    width: 40rem;
+                }
+    
+                @include respond(tab) {
+                    align-self: center;
+                    height: 60%;
+                    width: 70%;
+                }
+            }
+        }
+
+        .emptyCartText {
+            display: grid;
+            place-items: center;
+
+            h1 {
+                font-size: 2rem;
+                font-family: Open Sans, cursive, monospace, sans-serif;
+            }
+        }
+    }
+};
+
