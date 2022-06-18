@@ -8,7 +8,7 @@ function Cart() {
     const [called, setcalled] = useState(false);
     const [empty, isempty] = useState(true);
 
-    if (cartItems.length > 0 && called === false) {
+    if (cartItems[0] !== '' && called === false) {
         setcalled(true)
         isempty(false);
     };
@@ -45,17 +45,19 @@ function Cart() {
                         <div className="cardTwo">
                             {
                                 cartItems.map((el, i) => {
-                                    return (
-                                        <div className="cardItem" key={i}>
-                                            <div className="cardItemOne">
-                                                <img src={el.img} alt='item' />
+                                    if (el !== '') {
+                                        return (
+                                            <div className="cardItem" key={i}>
+                                                <div className="cardItemOne">
+                                                    <img src={el.img} alt='item' />
+                                                </div>
+                                                
+                                                <div className="cardItemTwo">
+                                                    <h1>{el.name}</h1>
+                                                </div>
                                             </div>
-                                            
-                                            <div className="cardItemTwo">
-                                                <h1>{el.name}</h1>
-                                            </div>
-                                        </div>
-                                    )
+                                        )
+                                    }
                                 })
                             }
                         </div>

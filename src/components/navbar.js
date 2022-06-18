@@ -24,6 +24,12 @@ function Navbar() {
     };
 
     const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+    let currentitem = 0;
+    cartItems.forEach(el => {
+        if (el !== '') {
+            currentitem++;
+        }
+    });
 
     return(
         <div className='navbar'>
@@ -68,7 +74,7 @@ function Navbar() {
     
                         <div id="cartItems">
                             <p>    
-                                {cartItems.length}
+                                {currentitem}
                             </p>
                         </div>
                     </li>

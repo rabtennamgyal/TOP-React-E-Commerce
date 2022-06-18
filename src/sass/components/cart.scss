@@ -52,10 +52,15 @@
     }
 
     .cartItems {
-        max-height: auto;
+        height: 100%;
         width: 100%;
         display: grid;
         grid-template-columns: 2fr 1fr;
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 2fr 1fr;
+        }
 
         .cards {
             display: grid;
