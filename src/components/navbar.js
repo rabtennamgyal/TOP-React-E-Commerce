@@ -23,6 +23,8 @@ function Navbar() {
         };
     };
 
+    const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+
     return(
         <div className='navbar'>
             <div className='navOne navBox'>
@@ -52,6 +54,10 @@ function Navbar() {
                     </li>
                 </Link>
 
+                {/* 
+                This should be made a link later on. 
+                After I started studying backend.
+                */}
                 <li className="links">
                     <ion-icon name="person-outline"></ion-icon>
                 </li>
@@ -62,7 +68,7 @@ function Navbar() {
     
                         <div id="cartItems">
                             <p>    
-                                0
+                                {cartItems.length}
                             </p>
                         </div>
                     </li>

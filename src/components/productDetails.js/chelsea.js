@@ -1,6 +1,7 @@
 import one from '../../assets/catalog/chelsea.webp';
 import two from '../../assets/catalog/chelsea2.webp';
 import three from '../../assets/catalog/chelsea3.webp';
+import { addToCart, selectSize } from '../resuableFunc';
 
 function Chelsea() {
     const arrs = [one, two, three];
@@ -53,31 +54,31 @@ function Chelsea() {
 
                 <div className='productInfo'>
                     <div className='size'>
-                        <div className='sizes xs'>
+                        <div className='sizes xs' onClick={selectSize}>
                             <p>
                                 XS
                             </p>
                         </div>
 
-                        <div className='sizes s'>
+                        <div className='sizes s' onClick={selectSize}>
                             <p>
                                 S
                             </p>
                         </div>
 
-                        <div className='sizes m'>
+                        <div className='sizes m' onClick={selectSize}>
                             <p>
                                 M
                             </p>
                         </div>
 
-                        <div className='sizes l'>
+                        <div className='sizes l' onClick={selectSize}>
                             <p>
                                 L
                             </p>
                         </div>
 
-                        <div className='sizes xl'>
+                        <div className='sizes xl' onClick={selectSize}>
                             <p>
                                 XL
                             </p>
@@ -95,7 +96,7 @@ function Chelsea() {
                     </div>
 
                     <div className='submit'>
-                        <button>
+                        <button onClick={addToCart}>
                             Add Cart
                         </button>
                     </div>

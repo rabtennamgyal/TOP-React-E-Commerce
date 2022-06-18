@@ -3,7 +3,6 @@
 
 const addToCart = (e) => {
     const parentEl = e.target.parentElement.parentElement.parentElement;
-    // These are the information of the product.
 
     let productImg = parentEl.parentElement.children[0].children[0].children[0].src;
     let productName = parentEl.children[0].children[0].textContent;
@@ -32,9 +31,33 @@ const addToCart = (e) => {
         qty: productQuantity
     };
 
-    console.log(addedProduct);
-    // this needs to be put in local storage.
+    localStorage.setItem(productName, JSON.stringify(addedProduct));
+};
+
+const selectSize = (e) => {
+    const parentEl = e.target;
+
+    if (parentEl.style.backgroundColor !== '#70e2ff') {
+        parentEl.style.backgroundColor = '#70e2ff';
+        parentEl.classList.add('selected');
+        // make sure of change color of already blue divs.
+    };
+};
+
+const getCartItems = () => {
+    const manutdjersey = localStorage.getItem('Manchester Unitd 2021 Authentic Jersey') ? 
+    JSON.parse(localStorage.getItem('Manchester Unitd 2021 Authentic Jersey') ) : '';
+
+    const chelseajersey = localStorage.getItem('Chelsea 2021 Authentic Jersey') ?
+    JSON.parse(localStorage.getItem('Chelsea 2021 Authentic Jersey')) : '';
+
+    const madridjersey = localStorage.getItem('Read Madrid 2021 Authentic Jersey') ? 
+    JSON.parse(localStorage.getItem('Read Madrid 2021 Authentic Jersey')) : '';
+
+    const cartItems = [manutdjersey, chelseajersey, madridjersey];
+
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
 };
 
 
-export default addToCart;
+export { addToCart, selectSize, getCartItems };

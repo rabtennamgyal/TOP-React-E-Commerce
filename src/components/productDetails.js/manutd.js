@@ -1,7 +1,7 @@
 import one from '../../assets/catalog/manutd.jpeg';
 import two from '../../assets/catalog/manutd2.jpeg';
 import three from '../../assets/catalog/manutd3.jpeg';
-import addToCart from '../resuableFunc';
+import { addToCart, selectSize } from '../resuableFunc';
 
 function Manutd() {
     const arrs = [one, two, three];
@@ -16,19 +16,6 @@ function Manutd() {
             });
         };
     });
-
-    const selectSize = (e) => {
-        const parentEl = e.target;
-
-        if (parentEl.style.backgroundColor !== '#70e2ff') {
-            parentEl.style.backgroundColor = '#70e2ff';
-            parentEl.classList.add('selected');
-            console.log(parentEl);
-
-            // make sure of change color of already blue divs.
-        };
-        
-    };
 
     return (
         <div className="productDetails">
