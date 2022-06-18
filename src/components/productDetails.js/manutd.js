@@ -1,6 +1,7 @@
 import one from '../../assets/catalog/manutd.jpeg';
 import two from '../../assets/catalog/manutd2.jpeg';
 import three from '../../assets/catalog/manutd3.jpeg';
+import addToCart from '../resuableFunc';
 
 function Manutd() {
     const arrs = [one, two, three];
@@ -15,6 +16,19 @@ function Manutd() {
             });
         };
     });
+
+    const selectSize = (e) => {
+        const parentEl = e.target;
+
+        if (parentEl.style.backgroundColor !== '#70e2ff') {
+            parentEl.style.backgroundColor = '#70e2ff';
+            parentEl.classList.add('selected');
+            console.log(parentEl);
+
+            // make sure of change color of already blue divs.
+        };
+        
+    };
 
     return (
         <div className="productDetails">
@@ -53,31 +67,31 @@ function Manutd() {
 
                 <div className='productInfo'>
                     <div className='size'>
-                        <div className='sizes xs'>
+                        <div className='sizes xs' onClick={selectSize}>
                             <p>
                                 XS
                             </p>
                         </div>
 
-                        <div className='sizes s'>
+                        <div className='sizes s' onClick={selectSize}>
                             <p>
                                 S
                             </p>
                         </div>
 
-                        <div className='sizes m'>
+                        <div className='sizes m' onClick={selectSize}>
                             <p>
                                 M
                             </p>
                         </div>
 
-                        <div className='sizes l'>
+                        <div className='sizes l' onClick={selectSize}>
                             <p>
                                 L
                             </p>
                         </div>
 
-                        <div className='sizes xl'>
+                        <div className='sizes xl' onClick={selectSize}>
                             <p>
                                 XL
                             </p>
@@ -95,7 +109,7 @@ function Manutd() {
                     </div>
 
                     <div className='submit'>
-                        <button>
+                        <button onClick={addToCart}>
                             Add Cart
                         </button>
                     </div>
