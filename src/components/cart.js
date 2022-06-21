@@ -8,9 +8,42 @@ function Cart() {
     const [called, setcalled] = useState(false);
     const [empty, isempty] = useState(true);
 
-    if (cartItems[0] !== '' && called === false) {
+    // the problem is in the navbar section since it only checks if the first 
+    // item in the array !== ''.
+
+    let items = 0;
+    cartItems.forEach(el => {
+        if (el !== '') {
+            items++;
+        };
+    });
+
+    if (items !== 0 && called === false) {
         setcalled(true)
         isempty(false);
+    };
+
+    const deleteCartItem = (e) => {
+        e.preventDefault();
+        const name = e.target.parentElement.parentElement.childNodes[0].childNodes[0].textContent;
+
+        let index;
+
+        cartItems.forEach((el, i) => {
+            if (el.name === name) {
+                index = i;
+            };
+        });
+
+        // 1. Removs the item from the local storage directly.
+        localStorage.removeItem(name);
+
+        // 2. Removes the item from the cart.
+        const newArr = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+        const updateArr = newArr.splice(index, 1);
+
+        localStorage.setItem('cartItems', JSON.stringify(newArr));
+        console.log(newArr);
     };
 
     return (
@@ -44,6 +77,7 @@ function Cart() {
 
                         <div className="cardTwo">
                             {
+                                // eslint-disable-next-line array-callback-return
                                 cartItems.map((el, i) => {
                                     if (el !== '') {
                                         return (
@@ -53,7 +87,21 @@ function Cart() {
                                                 </div>
                                                 
                                                 <div className="cardItemTwo">
-                                                    <h1>{el.name}</h1>
+                                                    <div className="name">
+                                                        <h1>{el.name}</h1>
+                                                    </div>
+
+                                                    <div className="details">
+                                                        <h1>Qty: {el.qty}</h1>
+                                                        <h1>{el.price}</h1>
+                                                        <h1>Size: {el.size}</h1>
+                                                    </div>
+
+                                                    <div className="delete">
+                                                        <ion-icon name="close-outline" id='deleteItem' onClick={deleteCartItem}>
+
+                                                        </ion-icon>
+                                                    </div>
                                                 </div>
                                             </div>
                                         )

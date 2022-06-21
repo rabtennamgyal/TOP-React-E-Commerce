@@ -103,13 +103,52 @@
                     }
 
                     .cardItemTwo {
+                        //border-left: .1px solid #000;
                         display: grid;
-                        justify-content: center;
+                        grid-template-rows: 20% 60% 20%;
 
-                        h1 {
-                            color: #000;
-                            font-family: Open Sans, sans-serif;
-                            font-size: 1.3rem;
+                        .name {
+                            display: grid;
+                            place-items: center;
+
+                            h1 {
+                                color: #000;
+                                font-family: Open Sans, sans-serif;
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        .details {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+
+                            h1 {
+                                display: grid;
+                                place-items: center;
+                                color: #000;
+                                font-family: Open Sans, sans-serif;
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        .delete {
+                            display: grid;
+                            place-items: center;
+
+                            #deleteItem {
+                                cursor: pointer;
+                                border: .5px solid #000;
+                                border-radius: 10rem;
+                                color: #000;
+                                font-family: Open Sans, sans-serif;
+                                font-size: 2.5rem;
+
+                                &:hover {
+                                    color: #fff;
+                                    background-color: #000;
+                                    transition: 0.7s ease-in-out;
+                                }
+                            }
                         }
                     }
                 }

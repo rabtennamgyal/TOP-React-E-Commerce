@@ -54,7 +54,29 @@ const getCartItems = () => {
     const madridjersey = localStorage.getItem('Read Madrid 2021 Authentic Jersey') ? 
     JSON.parse(localStorage.getItem('Read Madrid 2021 Authentic Jersey')) : '';
 
-    const cartItems = [manutdjersey, chelseajersey, madridjersey];
+    const barcajersey = localStorage.getItem('Barcalona 2021 Authentic Jersey') ? 
+    JSON.parse(localStorage.getItem('Barcalona 2021 Authentic Jersey')) : '';
+
+    const juvejersey = localStorage.getItem('Juventus 2021 Authentic Jersey') ?
+    JSON.parse(localStorage.getItem('Juventus 2021 Authentic Jersey')) : '';
+
+    const mancityjersey = localStorage.getItem('Manchester City 2021 Authentic Jersey') ?
+    JSON.parse(localStorage.getItem('Manchester City 2021 Authentic Jersey')) : '';
+
+    const liverpooljersey = localStorage.getItem('Liverpool 2021 Authentic Jersey') ?
+    JSON.parse(localStorage.getItem('Liverpool 2021 Authentic Jersey')) : '';
+
+    const munichjersey = localStorage.getItem('Bayern Munich 2021 Authentic Jersey') ?
+    JSON.parse(localStorage.getItem('Bayern Munich 2021 Authentic Jersey')) : '';
+
+    const psgjersey = localStorage.getItem('Paris Saint Germain 2021 Authentic Jersey') ?
+    JSON.parse(localStorage.getItem('Paris Saint Germain 2021 Authentic Jersey')) : '';
+
+    const cartItems = [
+        manutdjersey, chelseajersey, madridjersey, barcajersey,
+        juvejersey, mancityjersey, liverpooljersey, munichjersey,
+        psgjersey
+    ];
 
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 };
