@@ -37,10 +37,19 @@ const addToCart = (e) => {
 const selectSize = (e) => {
     const parentEl = e.target;
 
+    const arr = e.target.parentElement.childNodes;
+    let allSizes = Array.from(arr);
+
+    allSizes.forEach(el => {
+        if (el.classList.contains('selected')) {
+            el.classList.remove('selected');
+            el.style.backgroundColor = '#fff';
+        };
+    });
+
     if (parentEl.style.backgroundColor !== '#70e2ff') {
         parentEl.style.backgroundColor = '#70e2ff';
         parentEl.classList.add('selected');
-        // make sure of change color of already blue divs.
     };
 };
 

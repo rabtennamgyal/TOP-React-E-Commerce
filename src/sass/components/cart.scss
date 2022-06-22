@@ -73,6 +73,10 @@
                 display: grid;
                 align-items: center;
 
+                @include respond(phone) {
+                    width: 90%;
+                }
+
                 h1 {
                     color: #000;
                     font-family: Open Sans, sans-serif;
@@ -93,6 +97,10 @@
                     grid-template-columns: 1fr 1fr;
                     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
+                    @include respond(phone) {
+                        width: 90%;
+                    }
+
                     .cardItemOne {
                         padding: 5%;
 
@@ -103,32 +111,47 @@
                     }
 
                     .cardItemTwo {
-                        //border-left: .1px solid #000;
                         display: grid;
                         grid-template-rows: 20% 60% 20%;
+
+                        h1 {
+                            display: grid;
+                            place-items: center;
+                            color: #000;
+                            font-family: Open Sans, sans-serif;
+                            font-size: 1.5rem;
+                            
+                            @include respond(phone) {
+                                display: grid;
+                                place-items: center;
+                                height: 100%;
+                                width: 100%;
+                                font-size: 1.2rem;
+                            }
+                        }
 
                         .name {
                             display: grid;
                             place-items: center;
 
-                            h1 {
-                                color: #000;
-                                font-family: Open Sans, sans-serif;
-                                font-size: 1.5rem;
-                            }
+                            // h1 {
+                            //     color: #000;
+                            //     font-family: Open Sans, sans-serif;
+                            //     font-size: 1.5rem;
+                            // }
                         }
 
                         .details {
                             display: grid;
                             grid-template-columns: 1fr 1fr 1fr;
 
-                            h1 {
-                                display: grid;
-                                place-items: center;
-                                color: #000;
-                                font-family: Open Sans, sans-serif;
-                                font-size: 1.5rem;
-                            }
+                            // h1 {
+                            //     display: grid;
+                            //     place-items: center;
+                            //     color: #000;
+                            //     font-family: Open Sans, sans-serif;
+                            //     font-size: 1.5rem;
+                            // }
                         }
 
                         .delete {

@@ -40,10 +40,11 @@ function Cart() {
 
         // 2. Removes the item from the cart.
         const newArr = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+        // eslint-disable-next-line no-unused-vars
         const updateArr = newArr.splice(index, 1);
 
         localStorage.setItem('cartItems', JSON.stringify(newArr));
-        console.log(newArr);
+        window.location.reload();
     };
 
     return (
