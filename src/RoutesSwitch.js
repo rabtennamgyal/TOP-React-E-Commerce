@@ -30,9 +30,8 @@ import ClubShorts from "./components/shortsDetails.js/club";
 import LiverpoolShorts from "./components/shortsDetails.js/liverpool";
 
 
-
-
 function RoutesSwitch() {
+
     const addToWishList = (e) => {
         e.preventDefault();
 
@@ -115,7 +114,7 @@ function RoutesSwitch() {
 
             localStorage.setItem('arr', JSON.stringify(arr));
         }
-    };
+    }; 
 
     return (
         <BrowserRouter>

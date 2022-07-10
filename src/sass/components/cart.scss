@@ -177,6 +177,71 @@
                 }
             }
         }
+
+        .payment {
+            display: grid;
+            grid-template-rows: 1fr 2fr;
+
+            .payOne {
+                display: grid;
+                place-items: center;
+
+                .payOneContent {
+                    height: 80%;
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+
+                    p {
+                        margin: .5rem 0;
+                        font-size: 1.5rem;
+                        font-family: Open Sans, sans-serif;
+                    }
+
+                    h6 {
+                        color: #808080;
+                        margin: .5rem 0;
+                        font-size: 1rem;
+                        font-family: Open Sans, sans-serif;
+                    }
+
+                    h1 {
+                        margin: 1.5rem 0;
+                        font-size: 1.8rem;
+                        font-family: Open Sans, sans-serif;
+                    }
+                }
+            }
+
+            .payTwo {
+                //border: solid #0084ff;
+
+                .payTwoContent {
+                    //border: solid red;
+                    height: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+
+                    .checkout {
+                        background: #000;
+                        cursor: pointer;
+                        height: 5rem;
+                        width: 20rem;
+
+                        &:hover {
+                            background: #fff;
+                        }
+
+                        p {
+                            color: #fff;
+                            font-family: cursive, monospace, sans-serif;
+                        }
+                    }
+                }
+            }
+        }
     }
 };
 

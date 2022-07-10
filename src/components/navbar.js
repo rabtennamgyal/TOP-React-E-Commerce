@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { getCartItems } from "./resuableFunc";
 
 function Navbar() {
     const showMobileMenu = () => {
@@ -22,14 +23,10 @@ function Navbar() {
             }, 500);
         };
     };
-
+    
+    getCartItems();
     const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
-    let currentitem = 0;
-    cartItems.forEach(el => {
-        if (el !== '') {
-            currentitem++;
-        }
-    });
+    let cartItemsNumber = cartItems.filter(el => el !== '').length;
 
     return(
         <div className='navbar'>
@@ -64,9 +61,9 @@ function Navbar() {
                 This should be made a link later on. 
                 After I started studying backend.
                 */}
-                <li className="links">
+                {/* <li className="links">
                     <ion-icon name="person-outline"></ion-icon>
-                </li>
+                </li> */}
 
                 <Link to='/cart'>
                     <li className='links' id='cart'>
@@ -74,7 +71,7 @@ function Navbar() {
     
                         <div id="cartItems">
                             <p>    
-                                {currentitem}
+                                {cartItemsNumber}
                             </p>
                         </div>
                     </li>

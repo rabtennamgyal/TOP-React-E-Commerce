@@ -32,6 +32,7 @@ const addToCart = (e) => {
     };
 
     localStorage.setItem(productName, JSON.stringify(addedProduct));
+    window.location.reload();
 };
 
 const selectSize = (e) => {
@@ -81,10 +82,38 @@ const getCartItems = () => {
     const psgjersey = localStorage.getItem('Paris Saint Germain 2021 Authentic Jersey') ?
     JSON.parse(localStorage.getItem('Paris Saint Germain 2021 Authentic Jersey')) : '';
 
+    const manutdshorts = localStorage.getItem('Manchester United Shorts') ? 
+    JSON.parse(localStorage.getItem('Manchester United Shorts')) : '';
+
+    const chelseashorts = localStorage.getItem('Chelsea 2021 Authentic Shorts') ? 
+    JSON.parse(localStorage.getItem('Chelsea 2021 Authentic Shorts')) : '';
+
+    const usashorts = localStorage.getItem('USA National Team Authentic Shorts') ?
+    JSON.parse(localStorage.getItem('USA National Team Authentic Shorts')) : '';
+    
+    const psgshorts = localStorage.getItem('PSG 2021 Authentic Shorts') ?
+    JSON.parse(localStorage.getItem('PSG 2021 Authentic Shorts')) : '';
+
+    const barcashorts = localStorage.getItem('Barca Strike Shorts') ?
+    JSON.parse(localStorage.getItem('Barca Strike Shorts')) : '';
+
+    const munichshorts = localStorage.getItem('Munich Shorts') ?
+    JSON.parse(localStorage.getItem('Munich Shorts')) : '';
+
+    const mancityshorts = localStorage.getItem('Manchester City Shorts') ?
+    JSON.parse(localStorage.getItem('Manchester City Shorts')) : '';
+
+    const clubshorts = localStorage.getItem('Club America Authentic Shorts') ?
+    JSON.parse(localStorage.getItem('Club America Authentic Shorts')) : '';
+
+    const liverpoolshorts = localStorage.getItem('Liverpool Authentic Shorts') ?
+    JSON.parse(localStorage.getItem('Liverpool Authentic Shorts')) : '';
+
     const cartItems = [
         manutdjersey, chelseajersey, madridjersey, barcajersey,
         juvejersey, mancityjersey, liverpooljersey, munichjersey,
-        psgjersey
+        psgjersey, manutdshorts, chelseashorts, usashorts, psgshorts,
+        barcashorts, munichshorts, mancityshorts, clubshorts, liverpoolshorts
     ];
 
     localStorage.setItem('cartItems', JSON.stringify(cartItems));

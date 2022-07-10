@@ -1,6 +1,7 @@
 import one from '../../assets/shorts/munich.webp';
 import two from '../../assets/shorts/munich2.webp';
 import three from '../../assets/shorts/munich3.webp';
+import { addToCart, selectSize } from '../resuableFunc';
 
 function MunichShorts() {
     const arrs = [one, two, three];
@@ -41,7 +42,7 @@ function MunichShorts() {
             <div className="divTwo">
                 <div className='productTitle'>
                     <h1>
-                        Barca Strike Shorts
+                        Munich Shorts
                     </h1>
                 </div>
 
@@ -53,31 +54,31 @@ function MunichShorts() {
 
                 <div className='productInfo'>
                     <div className='size'>
-                        <div className='sizes xs'>
+                        <div className='sizes xs' onClick={selectSize}>
                             <p>
                                 XS
                             </p>
                         </div>
 
-                        <div className='sizes s'>
+                        <div className='sizes s' onClick={selectSize}>
                             <p>
                                 S
                             </p>
                         </div>
 
-                        <div className='sizes m'>
+                        <div className='sizes m' onClick={selectSize}>
                             <p>
                                 M
                             </p>
                         </div>
 
-                        <div className='sizes l'>
+                        <div className='sizes l' onClick={selectSize}>
                             <p>
                                 L
                             </p>
                         </div>
 
-                        <div className='sizes xl'>
+                        <div className='sizes xl' onClick={selectSize}>
                             <p>
                                 XL
                             </p>
@@ -95,7 +96,7 @@ function MunichShorts() {
                     </div>
 
                     <div className='submit'>
-                        <button>
+                        <button onClick={addToCart}>
                             Add Cart
                         </button>
                     </div>

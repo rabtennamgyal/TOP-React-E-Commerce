@@ -8,9 +8,6 @@ function Cart() {
     const [called, setcalled] = useState(false);
     const [empty, isempty] = useState(true);
 
-    // the problem is in the navbar section since it only checks if the first 
-    // item in the array !== ''.
-
     let items = 0;
     cartItems.forEach(el => {
         if (el !== '') {
@@ -109,6 +106,34 @@ function Cart() {
                                     }
                                 })
                             }
+                        </div>
+                    </div>
+
+                    <div className="payment">
+                        <div className="payOne">
+                            <div className="payOneContent">
+                                <p>Subtotal: </p>
+                                <p>Shipping: </p>
+                                <p>Tax: </p>
+                                <h6>will be calculated according to your address</h6>
+                                <h1>Total: </h1>
+                            </div>
+                        </div>
+
+                        <div className="payTwo">
+                            <div className="payTwoContent">
+                                <button className="checkout main">
+                                    <p>
+                                        Proceed to Checkout
+                                    </p>
+                                </button>
+    
+                                <button className="checkout paypal">
+                                    <p>
+                                        Paypal
+                                    </p>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,5 @@
-1. Navbar should be updated the moment item is added in cart. ( component should be rerendered. )
-2. Maybe also change how the component is rerendered after all items are deleted. ( instead of       refreshing)
-3. Make the mobile menu close when the viewport increases.
-4. Make the size selector change color when changing size.
+1. Make the mobile menu close when the viewport increases.
+
 
 
 # Getting Started with Create React App
