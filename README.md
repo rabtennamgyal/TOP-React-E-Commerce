@@ -1,5 +1,7 @@
 1. Make the mobile menu close when the viewport increases.
-
+2. Need to work on pay content div's elements sizes when changing 
+   viewport.
+3. Work on polishing up the cart page next.
 
 
 # Getting Started with Create React App

@@ -3,6 +3,10 @@
     max-height: auto;
     display: grid;
     place-items: center;
+
+    @include respond(phone) {
+        min-height: 130vh;
+    }
     
     .emptyCart {
         height: 100%;
@@ -58,22 +62,28 @@
         grid-template-columns: 2fr 1fr;
 
         @include respond(phone) {
-            grid-template-columns: 1fr;
-            grid-template-rows: 2fr 1fr;
+            // grid-template-columns: 1fr;
+            // grid-template-rows: 2fr 1fr;
+            display: flex;
+            flex-direction: column;
         }
 
         .cards {
             display: grid;
             background-color: #f1f1f1;
 
+            @include respond(phone) {
+                min-height: 60%;
+            }
+
             .cardOne {
-                height: 10rem;
                 justify-self: center;
                 width: 80%;
                 display: grid;
                 align-items: center;
 
                 @include respond(phone) {
+                    height: 20%;
                     width: 90%;
                 }
 
@@ -81,6 +91,10 @@
                     color: #000;
                     font-family: Open Sans, sans-serif;
                     font-size: 2.8rem;
+
+                    @include respond(phone) {
+                        font-size: 2.2rem;
+                    }
                 }
             }
 
@@ -181,6 +195,11 @@
         .payment {
             display: grid;
             grid-template-rows: 1fr 2fr;
+            max-height: 55rem;
+
+            @include respond(phone) {
+                max-height: 30rem;
+            }
 
             .payOne {
                 display: grid;
@@ -214,15 +233,17 @@
             }
 
             .payTwo {
-                //border: solid #0084ff;
 
                 .payTwoContent {
-                    //border: solid red;
                     height: 50%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: space-around;
+
+                    @include respond(phone) {
+                        height: 100%;
+                    }
 
                     .checkout {
                         background: #000;
