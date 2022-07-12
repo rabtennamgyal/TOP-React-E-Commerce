@@ -62,8 +62,11 @@
         grid-template-columns: 2fr 1fr;
 
         @include respond(phone) {
-            // grid-template-columns: 1fr;
-            // grid-template-rows: 2fr 1fr;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include respond(tab) {
             display: flex;
             flex-direction: column;
         }
@@ -81,9 +84,9 @@
                 width: 80%;
                 display: grid;
                 align-items: center;
+                height: 10rem;
 
                 @include respond(phone) {
-                    height: 20%;
                     width: 90%;
                 }
 
@@ -199,7 +202,11 @@
 
             @include respond(phone) {
                 max-height: 30rem;
-            }
+            };
+
+            @include respond(tab) {
+                max-height: 35rem;
+            };
 
             .payOne {
                 display: grid;
@@ -211,9 +218,18 @@
                     display: flex;
                     flex-direction: column;
 
-                    p {
+                    @include respond(phone) {
+                        width: 90%;
+                    }
+
+                    @include respond(tab) {
+                        width: 95%;
+                    }
+
+                    h2 {
+                        //border: solid red;
                         margin: .5rem 0;
-                        font-size: 1.5rem;
+                        font-size: 1.3rem;
                         font-family: Open Sans, sans-serif;
                     }
 
@@ -235,7 +251,7 @@
             .payTwo {
 
                 .payTwoContent {
-                    height: 50%;
+                    height: 35%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -243,21 +259,60 @@
 
                     @include respond(phone) {
                         height: 100%;
+                        justify-content: center;
+                    }
+
+                    @include respond(tab) {
+                        height: 100%;
+                        justify-content: center;
                     }
 
                     .checkout {
-                        background: #000;
+                        border: none;
                         cursor: pointer;
                         height: 5rem;
-                        width: 20rem;
+                        width: 80%;
+
+                        @include respond(phone) {
+                            width: 90%;
+                            margin: .5rem 0;
+                        }
+
+                        @include respond(tab) {
+                            width: 95%;
+                            margin: .5rem 0;
+                        }
+                    }
+
+                    .main {
+                        background: #000;
 
                         &:hover {
                             background: #fff;
+                            border: solid #000;
+                            transition: 0.7s ease-in-out;
+
+                            p {
+                                color: #000;
+                            }
                         }
 
                         p {
                             color: #fff;
                             font-family: cursive, monospace, sans-serif;
+                            font-weight: 600;
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                    .paypal {
+                        background: linear-gradient(98deg,#193c7b,#009cde 93%);
+
+                        
+                        p {
+                            color: #fff;
+                            font-family: Nunito, cursive, monospace, sans-serif;
+                            font-size: 2rem;
                         }
                     }
                 }

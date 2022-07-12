@@ -112,9 +112,9 @@ function Cart() {
                     <div className="payment">
                         <div className="payOne">
                             <div className="payOneContent">
-                                <p>Subtotal: </p>
-                                <p>Shipping: </p>
-                                <p>Tax: </p>
+                                <h2>Subtotal: </h2>
+                                <h2>Shipping: </h2>
+                                <h2>Tax: </h2>
                                 <h6>will be calculated according to your address</h6>
                                 <h1>Total: </h1>
                             </div>
