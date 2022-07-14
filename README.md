@@ -2,6 +2,8 @@
 2. Need to work on pay content div's elements sizes when changing 
    viewport.
 3. Work on polishing up the cart page next. ( use div.span on subtotal in cart page )
+4. Work on updating shipping and tax on cart. Also deleting price when items are deleted 
+   from the cart.
 
 
 # Getting Started with Create React App

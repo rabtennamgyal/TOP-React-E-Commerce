@@ -31,6 +31,23 @@ const addToCart = (e) => {
         qty: productQuantity
     };
 
+    // this updates the subtotal, shipping, tax & total in the local storage.
+    const allstorageKeys = [];
+    
+    for (let keys in localStorage) {
+        allstorageKeys.push(keys);
+    };
+    
+    if (!allstorageKeys.includes(productName)) {
+        const subtotal = localStorage.getItem('subtotal') ? JSON.parse(localStorage.getItem('subtotal')) : [];
+        subtotal.push(Number(productPrice.split('').splice(1, productPrice.length).join('')));
+        const updatedST = [subtotal.reduce((a, b) => a + b)];
+
+        // also do shipping and tax updated later.
+
+        localStorage.setItem('subtotal', JSON.stringify(updatedST));
+    };
+
     localStorage.setItem(productName, JSON.stringify(addedProduct));
     window.location.reload();
 };
@@ -118,6 +135,7 @@ const getCartItems = () => {
 
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 };
+
 
 
 export { addToCart, selectSize, getCartItems };

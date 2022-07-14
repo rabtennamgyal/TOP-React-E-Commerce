@@ -44,6 +44,9 @@ function Cart() {
         window.location.reload();
     };
 
+    // cart items total.
+    const subtotal = JSON.parse(localStorage.getItem('subtotal'));
+
     return (
         <div className="cart">
             {
@@ -112,11 +115,51 @@ function Cart() {
                     <div className="payment">
                         <div className="payOne">
                             <div className="payOneContent">
-                                <h2>Subtotal: </h2>
-                                <h2>Shipping: </h2>
-                                <h2>Tax: </h2>
-                                <h6>will be calculated according to your address</h6>
-                                <h1>Total: </h1>
+                                <div className="cart-price">
+                                    <span>
+                                        Subtotal
+                                    </span>
+
+                                    <span>
+                                        ${subtotal}.00
+                                    </span>
+                                </div>
+
+                                <div className="cart-price">
+                                    <span>
+                                        Shipping
+                                    </span>
+
+                                    <span>
+                                        $5
+                                    </span>
+                                </div>
+
+                                <div className="cart-price">
+                                    <span>
+                                        Tax
+                                    </span>
+
+                                    <span>
+                                        $3
+                                    </span>
+                                </div>
+
+                                <div className="cart-price">
+                                    <p>
+                                        will be calculated according to your address
+                                    </p>
+                                </div>
+
+                                <div className="cart-price">
+                                    <span className="total">
+                                        Total
+                                    </span>
+
+                                    <span className="total">
+                                        $100
+                                    </span>
+                                </div>
                             </div>
                         </div>
 
