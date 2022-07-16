@@ -40,7 +40,15 @@ function Cart() {
         // eslint-disable-next-line no-unused-vars
         const updateArr = newArr.splice(index, 1);
 
+        // 3. Substract the price value when an item is deleted.
+        const subtotal = localStorage.getItem('subtotal') ? JSON.parse(localStorage.getItem('subtotal')) : [];
+        const currentPrice = Number(e.target.parentElement.parentElement.childNodes[1].childNodes[1].textContent.split('').splice(1).join(''));
+
+        let subtotalPrice = subtotal[0];
+        let updatedSubtotal = [subtotalPrice - currentPrice];
+
         localStorage.setItem('cartItems', JSON.stringify(newArr));
+        localStorage.setItem('subtotal', JSON.stringify(updatedSubtotal));
         window.location.reload();
     };
 
