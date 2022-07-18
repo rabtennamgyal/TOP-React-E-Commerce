@@ -43,9 +43,11 @@ function Cart() {
         // 3. Substract the price value when an item is deleted.
         const subtotal = localStorage.getItem('subtotal') ? JSON.parse(localStorage.getItem('subtotal')) : [];
         const currentPrice = Number(e.target.parentElement.parentElement.childNodes[1].childNodes[1].textContent.split('').splice(1).join(''));
+        const currentQuantity = Number(e.target.parentElement.parentElement.childNodes[1].childNodes[0].textContent.split(' ')[1]);
 
         let subtotalPrice = subtotal[0];
-        let updatedSubtotal = [subtotalPrice - currentPrice];
+        let priceToBeDeducted = currentPrice * currentQuantity;
+        let updatedSubtotal = [subtotalPrice - priceToBeDeducted];
 
         localStorage.setItem('cartItems', JSON.stringify(newArr));
         localStorage.setItem('subtotal', JSON.stringify(updatedSubtotal));
