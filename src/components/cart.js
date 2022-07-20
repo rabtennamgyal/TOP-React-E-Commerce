@@ -2,6 +2,7 @@ import { useState } from "react";
 import emptybag from '../assets/random/emptyCart.png';
 import { getCartItems } from "./resuableFunc";
 
+
 function Cart() {
     getCartItems();
     const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
@@ -49,13 +50,21 @@ function Cart() {
         let priceToBeDeducted = currentPrice * currentQuantity;
         let updatedSubtotal = [subtotalPrice - priceToBeDeducted];
 
+        // 4. Substract the tax value when an item is deleted.
+        const newTax = updatedSubtotal * (5 / 100);
+
         localStorage.setItem('cartItems', JSON.stringify(newArr));
         localStorage.setItem('subtotal', JSON.stringify(updatedSubtotal));
+        localStorage.setItem('tax', JSON.stringify(newTax));
         window.location.reload();
     };
 
     // cart items total.
     const subtotal = JSON.parse(localStorage.getItem('subtotal'));
+    const shipping = 5;
+    const tax = JSON.parse(localStorage.getItem('tax'));
+    
+    const total = Number(subtotal) + shipping + Number(tax);
 
     return (
         <div className="cart">
@@ -141,7 +150,7 @@ function Cart() {
                                     </span>
 
                                     <span>
-                                        $5
+                                        ${shipping}.00
                                     </span>
                                 </div>
 
@@ -151,7 +160,7 @@ function Cart() {
                                     </span>
 
                                     <span>
-                                        $3
+                                        ${tax}
                                     </span>
                                 </div>
 
@@ -167,7 +176,7 @@ function Cart() {
                                     </span>
 
                                     <span className="total">
-                                        $100
+                                        ${total}
                                     </span>
                                 </div>
                             </div>

@@ -40,17 +40,22 @@ const addToCart = (e) => {
     
     if (!allstorageKeys.includes(productName)) {
         const subtotal = localStorage.getItem('subtotal') ? JSON.parse(localStorage.getItem('subtotal')) : [];
+        const tax = localStorage.getItem('tax') ? JSON.parse(localStorage.getItem('tax')) : 0.00;
         // extract the item's price and quantity. Then multiply it and then reduce it into subtotal.
+        // a. Subtotal
         const itemPrice = Number(productPrice.split('').splice(1, productPrice.length).join(''));
         const itemQuantity = Number(productQuantity);
         const totalItemPrice = itemPrice * itemQuantity;
-        
+        // b. Tax
+        const calculatedTax = (totalItemPrice * (5 / 100)) + tax;
+
         // Push the totalItemPrice into the subtotal array in local storage.
         subtotal.push(totalItemPrice);
 
         const updatedST = [subtotal.reduce((a, b) => a + b)];
         // also do shipping and tax updated later.
         localStorage.setItem('subtotal', JSON.stringify(updatedST));
+        localStorage.setItem('tax', JSON.stringify(calculatedTax));
     };
 
     localStorage.setItem(productName, JSON.stringify(addedProduct));
