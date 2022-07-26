@@ -1,6 +1,6 @@
-import one from '../random/green.png';
-import two from '../random/blue.jpeg';
-import three from '../random/yellow.jpeg';
+import one from '../random/three.jpg';
+import two from '../random/two.jpg';
+import three from '../random/four.webp';
 
 
 const carousalData = [
