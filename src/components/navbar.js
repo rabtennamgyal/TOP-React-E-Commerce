@@ -2,6 +2,19 @@ import { Link } from "react-router-dom";
 import { getCartItems } from "./resuableFunc";
 
 function Navbar() {
+    setInterval(() => {
+        if (window.innerWidth > 701) {
+            const hamburgers = document.querySelectorAll('.hamburgers');
+            const mobileMenu = document.querySelector('.mobileMenu');
+            const content = document.querySelector('.mobileMenuContent');
+            mobileMenu.style.height = '0';
+            content.style.display = 'none';
+            hamburgers[0].style.transform = 'rotate(0deg)';
+            hamburgers[1].style.display = 'block';
+            hamburgers[2].style.transform = 'rotate(0deg)';
+        }
+    }, 1000);
+
     const showMobileMenu = () => {
         const hamburgers = document.querySelectorAll('.hamburgers');
         const mobileMenu = document.querySelector('.mobileMenu');
@@ -56,14 +69,6 @@ function Navbar() {
                         <ion-icon name="heart-outline"></ion-icon>
                     </li>
                 </Link>
-
-                {/* 
-                This should be made a link later on. 
-                After I started studying backend.
-                */}
-                {/* <li className="links">
-                    <ion-icon name="person-outline"></ion-icon>
-                </li> */}
 
                 <Link to='/cart'>
                     <li className='links' id='cart'>

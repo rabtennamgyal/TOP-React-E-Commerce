@@ -63,7 +63,7 @@ function Cart() {
     const subtotal = JSON.parse(localStorage.getItem('subtotal'));
     const shipping = 5;
     const tax = JSON.parse(localStorage.getItem('tax'));
-    
+
     const total = Number(subtotal) + shipping + Number(tax);
 
     return (
