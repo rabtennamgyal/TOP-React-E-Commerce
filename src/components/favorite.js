@@ -1,5 +1,5 @@
 /* eslint-disable array-callback-return */
-import deleteItem from "./getItem";
+import deleteItem from "./resuableFunc";
 
 function Favorites() {
     const wishlist = localStorage.getItem('arr') ? JSON.parse(localStorage.getItem('arr')) : [];
