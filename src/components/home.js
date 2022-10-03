@@ -1,43 +1,63 @@
-import { useState } from "react";
-import carousalData from "../assets/random/carousalData";
+import { useRef } from 'react';
 import jersey from "../assets/random/soccer-jersey.png";
 import shorts from "../assets/random/football-shorts.png";
 import cleats from "../assets/random/cleats.png";
 import ball from "../assets/random/football.png";
+import one from '../assets/random/three.jpg';
+import two from '../assets/random/two.jpg';
+import three from '../assets/random/four.webp';
+
 
 function Home() {    
-    const [cur, setcur] = useState(0);
-    const length = carousalData.length;
+    const a = useRef(one);
+    const b = useRef(two);
+    const c = useRef(three);
 
-    const next = () => {
-        setcur(cur === length - 1 ? 0 : cur + 1);
+    const arr = [a, b, c];
+    let cur = 0;
+    let max = arr.length;
+
+    const slideLeft = () => {
+        if (cur === 0) {
+            cur = max - 1;
+        } else {
+            cur--;
+        };
+
+        arr.forEach((el, i) => {
+            el.current.style.transform = `translateX(${100 * (i - cur)}%)`;
+        });
     };
-    
-    const prev = () => {
-        setcur(cur === 0 ? length - 1 : cur - 1);
-    };
+
+    const slideRight = () => {
+        if (cur === max - 1) {
+            cur = 0;
+        } else {
+            cur++;
+        };
+
+        arr.forEach((el, i) => {
+            el.current.style.transform = `translateX(${100 * (i - cur)}%)`;
+        });
+    }
 
     return (
         <div className="home">    
             <div className="carousal">
                 <div className='buttons' id='left'>
-                    <button onClick={prev}>
+                    <button onClick={slideLeft}>
                         <ion-icon name="chevron-back-outline"></ion-icon>
                     </button>
                 </div>
 
-                {
-                    carousalData.map((el, i) => {
-                        return (
-                            <div className="cards" key={i}>
-                                {i === cur && (<img src={el.img} alt='img' />)}
-                            </div>
-                        )
-                    })
-                }
+                <div className="carouselBox">
+                    <img id='imgOne' ref={a} src={one} alt='football cleats on display' />
+                    <img id='imgTwo' ref={b} src={two} alt='football cleats on display' />
+                    <img id='imgThree' ref={c} src={three} alt='football cleats on display' />
+                </div>
 
                 <div className='buttons' id='right'>
-                    <button onClick={next}>
+                    <button onClick={slideRight}>
                         <ion-icon name="chevron-forward-outline"></ion-icon>
                     </button>
                 </div>

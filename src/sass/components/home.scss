@@ -17,14 +17,29 @@
             min-height: 60rem;
         };
 
-        .cards {
+        .carouselBox {
+            position: relative;
             height: 100%;
             width: 100%;
-            //border: solid red;
+            display: flex;
 
             img {
+                position: absolute;
                 height: 60rem;
                 width: 1400px;
+                transition: 0.7s ease-in-out;
+            }
+
+            #imgOne {
+                transform: translateX(0%);
+            }
+
+            #imgTwo {
+                transform: translateX(100%);
+            }
+
+            #imgThree {
+                transform: translateX(200%);
             }
         }
     };
