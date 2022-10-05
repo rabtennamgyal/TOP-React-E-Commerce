@@ -1,3 +1,4 @@
+import React from 'react';
 import one from '../../assets/catalog/psg.webp';
 import two from '../../assets/catalog/psg2.webp';
 import three from '../../assets/catalog/psg3.webp';

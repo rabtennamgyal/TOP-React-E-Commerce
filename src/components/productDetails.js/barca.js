@@ -1,3 +1,4 @@
+import React from 'react';
 import one from '../../assets/catalog/barca.jpeg';
 import two from '../../assets/catalog/barca2.jpeg';
 import three from '../../assets/catalog/barca3.webp';

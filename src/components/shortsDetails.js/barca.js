@@ -1,3 +1,4 @@
+import React from 'react';
 import one from '../../assets/shorts/barca.webp';
 import two from '../../assets/shorts/barca2.webp';
 import three from '../../assets/shorts/barca3.webp';

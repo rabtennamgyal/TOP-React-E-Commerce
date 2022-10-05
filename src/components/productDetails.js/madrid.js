@@ -1,3 +1,4 @@
+import React from 'react';
 import one from '../../assets/catalog/realmadrid.webp';
 import two from '../../assets/catalog/realmadrid2.webp';
 import three from '../../assets/catalog/realmadrid3.webp';

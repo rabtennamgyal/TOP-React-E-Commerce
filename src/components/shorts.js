@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import manutd from '../assets/shorts/manutd.webp';
 import chelsea from '../assets/shorts/chelsea.webp';

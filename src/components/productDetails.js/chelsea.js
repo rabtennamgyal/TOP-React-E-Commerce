@@ -1,3 +1,4 @@
+import React from 'react';
 import one from '../../assets/catalog/chelsea.webp';
 import two from '../../assets/catalog/chelsea2.webp';
 import three from '../../assets/catalog/chelsea3.webp';

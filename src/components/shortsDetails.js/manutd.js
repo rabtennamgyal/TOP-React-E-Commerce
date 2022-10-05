@@ -1,3 +1,4 @@
+import React from 'react';
 import one from '../../assets/shorts/manutd.webp';
 import two from '../../assets/shorts/manutd2.webp';
 import three from '../../assets/shorts/manutd3.webp';

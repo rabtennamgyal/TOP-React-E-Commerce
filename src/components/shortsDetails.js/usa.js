@@ -1,3 +1,4 @@
+import React from 'react';
 import one from '../../assets/shorts/usa.jpeg';
 import two from '../../assets/shorts/usa2.jpeg';
 import three from '../../assets/shorts/usa3.webp';

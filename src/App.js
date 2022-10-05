@@ -1,3 +1,4 @@
+import React from 'react';
 import RoutesSwitch from "./RoutesSwitch";
 
 function App() {

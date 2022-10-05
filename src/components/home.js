@@ -1,3 +1,4 @@
+import React from 'react';
 import { useRef } from 'react';
 import jersey from "../assets/random/soccer-jersey.png";
 import shorts from "../assets/random/football-shorts.png";

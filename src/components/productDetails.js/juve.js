@@ -1,3 +1,4 @@
+import React from 'react';
 import one from '../../assets/catalog/juve.webp';
 import two from '../../assets/catalog/juve2.webp';
 import three from '../../assets/catalog/juve3.webp';

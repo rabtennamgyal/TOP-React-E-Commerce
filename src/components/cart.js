@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from "react";
 import emptybag from '../assets/random/emptyCart.png';
 import { getCartItems } from "./resuableFunc";

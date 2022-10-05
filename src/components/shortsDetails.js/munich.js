@@ -1,3 +1,4 @@
+import React from 'react';
 import one from '../../assets/shorts/munich.webp';
 import two from '../../assets/shorts/munich2.webp';
 import three from '../../assets/shorts/munich3.webp';

@@ -1,4 +1,5 @@
 /* eslint-disable array-callback-return */
+import React from 'react';
 import deleteItem from "./resuableFunc";
 
 function Favorites() {

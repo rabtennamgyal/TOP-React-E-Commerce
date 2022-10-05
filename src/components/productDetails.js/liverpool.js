@@ -1,3 +1,4 @@
+import React from 'react';
 import one from '../../assets/catalog/liverpool.webp';
 import two from '../../assets/catalog/liverpool2.webp';
 import three from '../../assets/catalog/liverpool3.webp';

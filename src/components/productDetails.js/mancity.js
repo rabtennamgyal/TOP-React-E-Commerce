@@ -1,3 +1,4 @@
+import React from 'react';
 import one from '../../assets/catalog/mancity.jpg';
 import two from '../../assets/catalog/mancity2.jpg';
 import three from '../../assets/catalog/mancity3.jpg';
